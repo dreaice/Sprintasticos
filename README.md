@@ -2,16 +2,16 @@
 CH54 Generation - Proyecto Integrador  
 Roles de Equipo:
 Product Owner:
-o   Jorge Daniel Aragón Suárez
+Jorge Daniel Aragón Suárez
 Scrum Master:
-o   Andrea Eunice Aguirre López
+Andrea Eunice Aguirre López
 Desarrolladores:
-o   Juan Carlos Garza Dabdoud
-o   Lilian Delgado Maza
-o   Karla Itzel Jiménez Molina
-o   Oswaldo Alfredo Ramirez Bautista
-o   Joshua Edwin Ginez Eligio
-o   Maria del Rocio Bolaños Torres
-o   José Eduardo Landeros Sandoval.
-o   Abizaic Salvador Huescas Vergara
-o   Maria José González Rangel
+Juan Carlos Garza Dabdoud
+Lilian Delgado Maza
+Karla Itzel Jiménez Molina
+Oswaldo Alfredo Ramirez Bautista
+Joshua Edwin Ginez Eligio
+Maria del Rocio Bolaños Torres
+José Eduardo Landeros Sandoval.
+Abizaic Salvador Huescas Vergara
+Maria José González Rangel
