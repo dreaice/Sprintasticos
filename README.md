@@ -1,11 +1,11 @@
 # Sprintasticos
 CH54 Generation - Proyecto Integrador  
 Roles de Equipo:
--   	Product Owner:
+Product Owner:
 o   Jorge Daniel Aragón Suárez
--   	Scrum Master:
+Scrum Master:
 o   Andrea Eunice Aguirre López
--   	Desarrolladores:
+Desarrolladores:
 o   Juan Carlos Garza Dabdoud
 o   Lilian Delgado Maza
 o   Karla Itzel Jiménez Molina
