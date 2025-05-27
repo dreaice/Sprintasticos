@@ -119,11 +119,11 @@ cd Sprintasticos
 
 ### 🚀 3. Configuración del Backend
 
-Pendiente...
+Pendiente....
 
 ### 💻 4. Configuración del Frontend
 
-Pendiente...
+Pendiente....
 
 ---
 
