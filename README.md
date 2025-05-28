@@ -1,16 +1,41 @@
-# Sprintasticos
-CH54 Generation - Proyecto Integrador  
+# 💎 E-commerce de Joyería Personalizada 💎
 
+ 
 
-# 💎 E-commerce de Joyería Personalizada Sprintasticos
+<div align="center">
+ Un proyecto desarrollado con pasión por el equipo Sprintasticos <br><br>
+  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" alt="Java"/>
+  <img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white" alt="Spring"/>
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React"/>
+  <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap"/>
+</div>
 
-Este es un sistema de comercio electrónico desarrollado para una casa joyera simulada que ofrece productos personalizados. Los precios varían según los acabados elegidos por el cliente y se definen durante una visita personalizada. Además, las cotizaciones se gestionan mediante un folio de seguimiento.
+---
+
+## 📝 Descripción del Proyecto
+
+Este es un innovador e-commerce especializado en joyería personalizada, donde cada pieza cuenta una historia única. Nuestro sistema permite a los clientes:
+
+- 🎨 **Personalizar** sus joyas con diferentes acabados y materiales
+- 💎 **Recibir cotizaciones personalizadas** con folio de seguimiento
+- 📱 Disfrutar de una **experiencia de compra intuitiva** y elegante
+- 🔒 **Gestionar sus pedidos** de forma segura y eficiente
+
+---
+
+## 🎯 Características Principales
+
+- ✨ **Personalización Avanzada**: Sistema de cotización en tiempo real
+- 📦 **Gestión de Pedidos**: Seguimiento de órdenes con folios únicos
+- 🛍️ **Catálogo Dinámico**: Visualización de productos con múltiples variantes
+- ⚙️ **Panel de Administración**: Gestión completa de productos y pedidos
+- 🛡️ **Sistema de Usuarios**: Registro y autenticación segura
 
 ---
 
 ## 🎓 Proyecto Académico
 
-Este proyecto fue desarrollado como parte del programa de formación **Java Full Stack Web Developer** del bootcamp **Generation México** de la corte **54** del equipo **1** o mejor conocidos como **Sprintasticos**.
+Este proyecto fue desarrollado como parte del programa de formación **Java Full Stack Web Developer** del bootcamp **Generation México** de la corte **54** por el equipo **Sprintasticos**.
 
 Trabajamos en equipo utilizando la metodología **Scrum**, aplicando buenas prácticas de desarrollo ágil con roles definidos y trabajo en sprints.
 
@@ -18,42 +43,48 @@ Trabajamos en equipo utilizando la metodología **Scrum**, aplicando buenas prá
 
 ## 👨‍💻 Tecnologías Utilizadas
 
-**Frontend:**
-- React
-- HTML5
-- CSS3
-- Bootstrap 5
-- JavaScript
+### Frontend
+<div align="center">
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React"/>
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"/>
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"/>
+  <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap"/>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"/>
+</div>
 
-**Backend:**
-- Java 17
-- Spring Boot
-- Maven
+### Backend
+<div align="center">
+  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" alt="Java"/>
+  <img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white" alt="Spring"/>
+  <img src="https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white" alt="Maven"/>
+</div>
 
-**Herramientas de desarrollo y gestión:**
-- Git y GitHub
-- Visual Studio Code / IntelliJ IDEA
-- Trello / Jira
-- Postman
+### Herramientas de Desarrollo y Gestión
+<div align="center">
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git"/>
+  <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+  <img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white" alt="VS Code"/>
+  <img src="https://img.shields.io/badge/Apache_NetBeans_IDE-1B6AC6?style=for-the-badge&logo=apache-netbeans-ide&logoColor=white" alt="NetBeans"/>
+  <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman"/>
+</div>
 
 ---
 
-## 🧑‍🤝‍🧑 Equipo de Desarrollo (Scrum Roles)
+## 🧑‍🤝‍🧑 Equipo de Desarrollo (Scrum Roles) A-Z
 
 | Nombre                           | Rol             |
 |----------------------------------|------------------|
-| Andrea Eunice Aguirre López      | Scrum Master     |
-| Jorge Daniel Aragón Suárez       | Product Owner    |
-| Joshua Edwin Ginez Eligio        | Scrum master     |
-| Juan Carlos Garza Dabdoud        | Developer        |
-| Lilian Delgado Maza              | Developer        |
-| Karla Itzel Jiménez Molina       | Developer        |
-| Oswaldo Alfredo Ramirez Bautista |Developer         |
-| Maria del Rocio Bolaños Torres   | Developer        |
-| José Eduardo Landeros Sandoval   | Developer        |
-| Abizaic Salvador Huescas Vergara | Developer        |
-| Maria José González Rangel       | Developer        |
-
+| Aguirre López Andrea Eunice      | **Scrum Master** |
+| Aragón Suárez Jorge Daniel       | **Product Owner**|
+| Bolaños Torres Maria del Rocio   | Developer        |
+| Delgado Maza Lilian              | Developer        |
+| Garza Dabdoud Juan Carlos        | Developer        |
+| Ginez Eligio Joshua Edwin        | Developer        |
+| González Rangel Maria José       | Developer        |
+| Huescas Vergara Abizaic Salvador | Developer        |
+| Jiménez Molina Karla Itzel       | Developer        |
+| Landeros Sandoval José Eduardo   | Developer        |
+| Ramirez Bautista Oswaldo Alfredo | Developer        |
 
 ---
 
@@ -80,10 +111,51 @@ Pasos:
      git clone https://github.com/dreaice/Sprintasticos.git
      ```
 
-
----
-
 ### 📁 2. Accede al directorio del proyecto
 
 ```bash
-cd Sprintasticos```
+cd Sprintasticos
+```
+
+### 🚀 3. Configuración del Backend
+
+Pendiente....
+
+### 💻 4. Configuración del Frontend
+
+Pendiente....
+
+---
+
+## 📊 Estructura del Proyecto
+
+```
+Sprintasticos/
+├── backend/                 # Proyecto Spring Boot
+│   └── src/
+├── frontend/               # Proyecto React
+│   └── src/
+└── README.md
+```
+
+---
+
+## 🤝 Contribución
+
+1. Haz un Fork del proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
+
+---
+
+## 📞 Contacto
+
+Para cualquier consulta o sugerencia sobre el proyecto, no dudes en contactar al equipo Sprintasticos.
+
+---
+
+<div align="center">
+  <sub>Desarrollado con ❤️ por el equipo Sprintasticos</sub>
+</div>
