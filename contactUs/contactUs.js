@@ -1,7 +1,11 @@
-// Inicializar EmailJS
-(function () {
-    emailjs.init("fG-6ooz1ElVeKdtLZ");
+// contactUs.js
+  (function(){
+    emailjs.init('fG-6ooz1ElVeKdtLZ');
   })();
+
+
+// Inicializa EmailJS
+emailjs.init("fG-6ooz1ElVeKdtLZ");
   
   document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("contact-form");
@@ -39,7 +43,8 @@
         title: "Nuevo mensaje de contacto",
         time: new Date().toLocaleString()
       })
-      .then(() => {
+      .then((response) => {
+        console.log("Email enviado:", response)
         alert("¡Mensaje enviado con éxito!");
         form.reset();
       })
