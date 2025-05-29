@@ -237,3 +237,65 @@ body {
 .wrapper {
     flex: 1;
 }
+/* nav bar*/
+.navbar-custom {
+    background-color: var(--color-fondo);
+    border-bottom: 2px solid var(--color-claro);
+  }
+  
+  .nav-link {
+    color: var(--color-texto) !important;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-terciario);
+    bottom: -4px;
+    left: 0;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  .btn-agenda, .btn-login {
+    font-size: 0.9rem;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px rgba(189, 88, 119, 0.5);
+  }
+  
+  .btn-agenda {
+    background-color: var(--color-terciario);
+    color: white;
+  }
+  
+  .btn-login {
+    background-color: var(--color-secundario);
+    color: white;
+  }
+  
+  .btn-agenda:hover, .btn-login:hover {
+    box-shadow: 0 0 10px 5px rgba(189, 88, 119, 0.8);
+    transform: scale(1.05);
+  }
+  
+  .cart-icon {
+    font-size: 1.5rem;
+    color: var(--color-texto);
+    transition: color 0.3s ease;
+  }
+  
+  .cart-icon:hover {
+    color: var(--color-terciario);
+  }
+  .gap-lg .nav-item {
+    margin: 0 1.2rem; 
+  } 
