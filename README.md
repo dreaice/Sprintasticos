@@ -82,7 +82,7 @@ Trabajamos en equipo utilizando la metodología **Scrum**, aplicando buenas prá
 | Ginez Eligio Joshua Edwin        | Developer        |
 | González Rangel Maria José       | Developer        |
 | Huescas Vergara Abizaic Salvador | Developer        |
-| Jiménez Molina Karla Itzel       | Developer        |
+| Jimenez Molina Karla Itzel       | Developer        |
 | Landeros Sandoval José Eduardo   | Developer        |
 | Ramirez Bautista Oswaldo Alfredo | Developer        |
 
