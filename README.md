@@ -152,7 +152,7 @@ Sprintasticos/
 
 ## 📞 Contacto
 
-Para cualquier consulta o sugerencia sobre el proyecto, no dudes en contactar al equipo Sprintasticos.
+Para cualquier consulta o sugerencia sobre el proyecto, no dudes por favor en contactar al equipo Sprintasticos.
 
 ---
 
