@@ -720,3 +720,12 @@ body {
     position: relative;
     z-index: 2;
 }
+.social-icons a {
+    color: white;
+    transition: color 0.3s, transform 0.3s;
+  }
+  
+  .social-icons a:hover {
+    color:  #9c27b0; 
+    transform: scale(1.2);
+  }
