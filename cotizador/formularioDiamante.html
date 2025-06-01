@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Formulario Cotización</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/nouislider@15.7.0/dist/nouislider.min.css" rel="stylesheet">
+  <link href="./styles-cotizador.css" rel="stylesheet">
+</head>
+
+<body>
+
+<main class="container py-5">
+ <h2 class="text-center mb-2">Cotiza tu diamante</h2>
+  <form class="row d-flex justify-content-center align-items-center vh-100">
+<!-- columna de forma y quilates -->
+    <section class="col-12 col-md-12 col-lg-6 p-4 pt-0"> 
+    <!-- Forma -->
+    <fieldset class="mb-1">
+      <legend class="form-label">Forma</legend>
+      <section class="d-flex flex-wrap gap-3">
+        <figure class="d-flex flex-column align-items-center">
+        <img src="./imagenes/redondoForma.webp" alt="Forma Redonda" class="img-thumbnail"  style="width: 5rem; height: 5rem; cursor: pointer;">
+        <figcaption class="text-center mt-2">Redondo</figcaption>
+      </figure>
+      <figure>
+        <img src="./imagenes/rectanguloForma.webp" alt="Forma Rectangular" class="img-thumbnail"  style="width: 5rem; height: 5rem; cursor: pointer;">
+        <figcaption class="text-center mt-2">Rectangulo</figcaption>
+      </figure> 
+      <figure>
+        <img src="./imagenes/asscherForma.webp" alt="Forma Asscher" class="img-thumbnail"  style="width: 5rem; height: 5rem; cursor: pointer;">
+        <figcaption class="text-center mt-2">Asscher</figcaption>
+      </figure>
+      <figure>
+        <img src="./imagenes/cojinForma.webp" alt="Forma Cojin" class="img-thumbnail"  style="width: 5rem; height: 5rem; cursor: pointer;">
+        <figcaption class="text-center mt-2">Cojin</figcaption>
+      </figure>
+      <figure>
+        <img src="./imagenes/corazonForma.webp" alt="Forma Corazon" class="img-thumbnail"  style="width: 5rem; height: 5rem; cursor: pointer;">
+        <figcaption class="text-center mt-2">Corazon</figcaption>
+      </figure>
+      <figure>
+        <img src="./imagenes/cuadradoForma.webp" alt="Forma Cuadrado" class="img-thumbnail"  style="width: 5rem; height: 5rem; cursor: pointer;">
+        <figcaption class="text-center mt-2">Cuadrado</figcaption>
+      </figure>
+      <figure>
+        <img src="./imagenes/ovaladoForma.webp" alt="Forma Ovalado" class="img-thumbnail"  style="width: 5rem; height: 5rem; cursor: pointer;">
+        <figcaption class="text-center mt-2">Ovalado</figcaption>
+      </figure>
+      <figure>
+        <img src="./imagenes/marquesaForma.webp" alt="Forma Marquesa" class="img-thumbnail"  style="width: 5rem; height: 5rem; cursor: pointer;">
+        <figcaption class="text-center mt-2">Marquesa</figcaption>
+      </figure>
+      <figure>
+        <img src="./imagenes/radianteForma.webp" alt="Forma Radiante" class="img-thumbnail"  style="width: 5rem; height: 5rem; cursor: pointer;">
+        <figcaption class="text-center mt-2">Radiante</figcaption>
+      </figure>
+      <figure>
+        <img src="./imagenes/peraForma.webp" alt="Forma Radiante" class="img-thumbnail"  style="width: 5rem; height: 5rem; cursor: pointer;">
+        <figcaption class="text-center mt-2">Radiante</figcaption>
+      </figure>
+      </section>
+    </fieldset>
+
+    <!-- Quilates -->
+    <fieldset class="slider-wrapper">
+      <legend class="form-label">Quilates</legend>
+      <div id="quilates-slider" class="custom-slider"></div>
+        <legend class="slider-labels mt-2">
+        <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+        </legend>
+
+        <div class="d-flex justify-content-between align-items-center gap-2">
+          <label> Mín: <input type="number" id="min-quilates" class="form-control form-control-sm" style="width: 80px;"> </label>
+          <label> Máx: <input type="number" id="max-quilates" class="form-control form-control-sm" style="width: 80px;">
+          </label>
+        </div>
+
+      
+    </fieldset>
+
+    
+    
+    </section>
+<!-- columna de corte, color claridad fluorescencia y cerficado -->
+    <section class="col-12 col-md-12 col-lg-6 p-4 pt-0">
+
+    <!-- Corte -->
+    <fieldset class="slider-wrapper">
+      <legend class="form-label">Corte</legend>
+      <div id="corte-slider" class="custom-slider"></div>
+      <div class="slider-labels">
+        <span>Excelente</span><span>Muy Bueno</span><span>Bueno</span><span>Aceptable</span><span>Deficiente</span>
+      </div>
+    </fieldset>
+
+    <!-- Color -->
+    <fieldset class="slider-wrapper">
+      <legend class="form-label">Color</legend>
+      <div id="color-slider" class="custom-slider"></div>
+      <div class="slider-labels">
+        <span>D</span><span>E</span><span>F</span><span>G</span><span>H</span><span>I</span><span>J</span>
+      </div>
+    </fieldset>
+
+    <!-- Claridad -->
+    <fieldset class="slider-wrapper">
+      <legend class="form-label">Claridad</legend>
+      <div id="claridad-slider" class="custom-slider"></div>
+      <div class="slider-labels">
+        <span>FL</span><span>IF</span><span>VVS1</span><span>VVS2</span><span>VS1</span><span>SI1</span><span>SI2</span>
+      </div>
+    </fieldset>
+
+    <!-- Fluorescencia -->
+    <fieldset class="slider-wrapper">
+      <legend class="form-label">Fluorescencia</legend>
+      <div id="fluorescencia-slider" class="custom-slider"></div>
+      <div class="slider-labels">
+        <span>Muy fuerte</span><span>Fuerte</span><span>Media</span><span>Tenue</span><span>Nada</span>
+      </div>
+    </fieldset>
+
+    <!-- Certificado -->
+    <fieldset class="mb-4">
+      <legend class="form-label">Certificado</legend>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="certificado" id="gia" value="GIA" checked>
+        <label class="form-check-label" for="gia">GIA</label>
+      </div>
+    </fieldset>
+
+    </section>
+
+    <section class="d-flex justify-content-end mb-3">
+    <a class="btn text-white col-3 boton-home" href="./cotizador.html" role="button">
+    Regresar a la selección de gema
+    </a>
+    </section>
+
+
+    <!-- Botón Cotizar -->
+    <section class="text-center p-4">
+      <button type="button" class="btn btn-lg col-6 boton-cotizar"  data-bs-toggle="modal" data-bs-target="#cotizarModal">Cotizar</button>
+    </section>
+
+  </form>
+</main>
+
+<!-- Modal Cotizar -->
+<section class="modal fade" id="cotizarModal" tabindex="-1" aria-labelledby="cotizarModalLabel" aria-hidden="true">
+  <section class="modal-dialog modal-dialog-centered">
+    <article class="modal-content">
+      
+      <header class="position-relative">
+        <h3 class="modal-title w-100 text-center p-3" id="cotizarModalLabel">Precio Estimado</h3>
+        <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </header>
+
+      <fieldset class="modal-body text-center">
+        <div class="fs-4 mb-3">$250 000 MXN</div>
+        <a class="btn col-6 boton-cita mb-3" href="./cotizador.html" role="button">Generar Cita</a>
+        <p class="text-muted">Precio estimado, sujeto a cambios según disponibilidad y materiales</p>
+      </fieldset>
+
+    </article>
+  </section>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/nouislider@15.7.0/dist/nouislider.min.js"></script>
+<script src="./formularioDiamante.js"></script>
+</body>
+</html>
