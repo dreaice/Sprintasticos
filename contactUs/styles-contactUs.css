@@ -57,7 +57,7 @@ a:hover {
     transition: backgroun-color 0.3s ease;
 }
 
-.boton-enviar:hover {
+.boton-enviar   :hover {
     background-color: var(--color-terciario);
 }
 
