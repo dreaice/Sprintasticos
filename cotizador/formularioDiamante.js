@@ -65,37 +65,38 @@ imagenesForma.forEach(img => {
 
 
 function obtenerDatosFormulario() {
-  // 1. Capturar formas seleccionadas
-  const formasSeleccionadas = [];
-  document.querySelectorAll('.forma-activa').forEach(figura => {
-    formasSeleccionadas.push(figura.dataset.valor);
-  });
+  // Formas seleccionadas
+  const formasSeleccionadas = Array.from(document.querySelectorAll('.forma-activa'))
+    .map(figura => figura.dataset.valor);
 
-  // 2. Capturar pureza desde el slider
-  const purezaSlider = document.getElementById('pureza-slider').noUiSlider;
-  const pureza = parseFloat(purezaSlider.get()[0]); // o un rango si es doble
+  // Función para leer sliders noUiSlider
+  const leerSlider = (id) => {
+    const slider = document.getElementById(id)?.noUiSlider;
+    return slider ? parseFloat(slider.get()[0]) : null;
+  };
 
-  // 3. Capturar quilates mínimo y máximo
-  const minQuilates = parseFloat(document.getElementById('min-quilates').value);
-  const maxQuilates = parseFloat(document.getElementById('max-quilates').value);
+  // Quilates
+  const minQuilates = parseFloat(document.getElementById('min-quilates').value) || 0;
+  const maxQuilates = parseFloat(document.getElementById('max-quilates').value) || 0;
 
-  // 4. Capturar intensidad desde el slider
-  const intensidadSlider = document.getElementById('intensidad-slider').noUiSlider;
-  const intensidad = parseFloat(intensidadSlider.get()[0]);
-
-  // 5. Construir el objeto final
+  // Construcción del objeto
   const datosFormulario = {
     formas: formasSeleccionadas,
-    pureza: pureza,
+    pureza: leerSlider('pureza-slider'),
     quilates: {
       min: minQuilates,
       max: maxQuilates
     },
-    intensidad: intensidad
+    intensidad: leerSlider('intensidad-slider'),
+    corte: leerSlider('corte-slider'),
+    color: leerSlider('color-slider'),
+    claridad: leerSlider('claridad-slider'),
+    fluorescencia: leerSlider('fluorescencia-slider')
   };
 
   return datosFormulario;
 }
+
 
 document.querySelector('.boton-cotizar').addEventListener('click', () => {
   const datos = obtenerDatosFormulario();
