@@ -127,6 +127,11 @@ legend {
     font-size: 1.5rem;
   }
 
+  .forma-img.seleccionada {
+  border: 3px solid var(--color-primario); 
+  box-shadow: 0 0 10px var(--color-terciario);
+  border-radius: 0.5rem;
+}
 /* Estilos de los sliders */
     .slider-wrapper {
       margin-bottom: 1rem;
