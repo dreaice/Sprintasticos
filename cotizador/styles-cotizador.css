@@ -161,6 +161,11 @@ legend {
       background-color:var(--color-terciario);
     }
 
+   .form-check-input:checked {
+  background-color: var(--color-primario);
+  border-color: var(--color-primario);
+}
+
     .boton-home{
       font-family: 'Jost', 'Futura', sans-serif;
       font-weight: 500;
@@ -228,4 +233,5 @@ legend {
       color: var(--color-fondo);
     }
 
+   
     
