@@ -1,73 +1,62 @@
 [
   {
     "name": "Anillo abrazo amatista",
-    "img": "",
-    "description": "Anillo de plata con amatistas de corte moderno, ideal para cualquier ocasión.",
     "price": 15000,
-    "available": true
+    "description": "Anillo de plata con amatistas de corte moderno.",
+    "img": ""
   },
   {
     "name": "Anillo solitario diamante",
-    "img": "",
-    "description": "Elegante anillo de solitario con diamante blanco, un regalo perfecto.",
     "price": 25000,
-    "available": true
+    "description": "Anillo con diamante blanco en oro 18k.",
+    "img": ""
   },
   {
     "name": "Pendientes de perlas",
-    "img": "",
-    "description": "Pendientes de perlas cultivadas de alta calidad con acabado de oro.",
     "price": 8000,
-    "available": true
+    "description": "Pendientes con perlas cultivadas de alta calidad.",
+    "img": ""
   },
   {
     "name": "Collar de esmeralda",
-    "img": "",
-    "description": "Collar de esmeralda con cadena de oro de 18k, resalta la elegancia natural.",
     "price": 30000,
-    "available": false
+    "description": "Collar con esmeralda de calidad superior.",
+    "img": ""
   },
   {
     "name": "Pulsera de zafiro",
-    "img": "",
-    "description": "Pulsera elegante con zafiros brillantes, una pieza imprescindible en tu colección.",
     "price": 18000,
-    "available": true
+    "description": "Pulsera con zafiros brillantes y cadena de oro.",
+    "img": ""
   },
   {
     "name": "Anillo de compromiso oro rosa",
-    "img": "",
-    "description": "Anillo de compromiso con diamante en oro rosa, símbolo de un amor eterno.",
     "price": 35000,
-    "available": true
+    "description": "Anillo de compromiso con diamante en oro rosa.",
+    "img": ""
   },
   {
     "name": "Brazalete de plata",
-    "img": "",
-    "description": "Brazalete de plata de ley, diseño moderno y minimalista para un look elegante.",
     "price": 7000,
-    "available": true
+    "description": "Brazalete de plata de ley, diseño minimalista.",
+    "img": ""
   },
   {
     "name": "Anillo de rubí",
-    "img": "",
-    "description": "Anillo con rubí en centro rodeado de pequeños diamantes, para un toque de distinción.",
     "price": 22000,
-    "available": true
+    "description": "Anillo con rubí y diamantes brillantes.",
+    "img": ""
   },
   {
     "name": "Reloj de lujo con diamantes",
-    "img": "",
-    "description": "Reloj de lujo con diamantes incrustados en la carátula, marca exclusiva.",
     "price": 40000,
-    "available": false
+    "description": "Reloj exclusivo con diamantes incrustados.",
+    "img": ""
   },
   {
     "name": "Anillo de esmeralda",
-    "img": "",
-    "description": "Anillo con esmeralda colombiana en oro blanco, para ocasiones especiales.",
     "price": 28000,
-    "available": true
+    "description": "Anillo de oro blanco con esmeralda colombiana.",
+    "img": ""
   }
 ]
-
