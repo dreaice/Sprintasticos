@@ -11,42 +11,6 @@
     --color-fondo: #FFFBF5;
 }
 
-/* RESET BÁSICO */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Tipografías */
-body {
-    font-family: 'Jost', 'Futura,' sans-serif;
-    font-weight: 400;
-    background-color: var(--color-fondo);
-    color: var(--color-texto);
-    line-height: 1.5;
-}
-
-/* Títulos y Destacados */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Source Serif Pro', serif;
-    font-weight: 700;
-    color: var(--color-primario);
-}
-
-section{
-    background-color: var(--color-fondo);
-}
-/* Enlaces */
-a {
-    text-decoration: none;
-    color: var(--color-primario);
-}
-
-a:hover {
-    color: var(--color-terciario);
-}
-
 /* Hover para la seleccion de la gema */
 .gem-container {
     position: relative;
