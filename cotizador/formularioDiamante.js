@@ -101,5 +101,7 @@ function obtenerDatosFormulario() {
 document.querySelector('.boton-cotizar').addEventListener('click', () => {
   const datos = obtenerDatosFormulario();
   console.log("Datos del formulario:", datos);
-  // Aquí puedes enviarlo al backend con fetch()
+  // Aquí se guarda en el local storage
+
+  localStorage.setItem('datosCotizacion', JSON.stringify(datos));
 });
