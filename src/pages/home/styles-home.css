@@ -1,0 +1,413 @@
+/* Fuente Principal y Secundaria */
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500&family=Source+Serif+Pro:wght@400;700&display=swap');
+
+/* Paleta de colores */
+:root {
+    --color-primario: #740354;
+    --color-secundario: #B99FC1;
+    --color-terciario: #BD5877;
+    --color-claro: #FDCBC9;
+    --color-texto: #343434;
+    --color-fondo: #FFFBF5;
+}
+
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tipografías */
+body {
+    font-family: 'Jost', 'Futura,' sans-serif;
+    font-weight: 400;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.5;
+}
+
+/* Títulos y Destacados */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Source Serif Pro', serif;
+    font-weight: 700;
+    color: var(--color-primario);
+}
+
+/* Enlaces */
+a {
+    text-decoration: none;
+    color: var(--color-primario);
+}
+
+a:hover {
+    color: var(--color-terciario);
+}
+
+/* Botones */
+button, .btn-modificado {
+    font-family: 'Jost', 'Futura', sans-serif;
+    font-weight: 500;
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: backgroun-color 0.3s ease;
+}
+
+button:hover, .btn-modificado:hover {
+    background-color: var(--color-terciario);
+}
+
+/* Inputs */
+input, textarea {
+    font-family: 'Jost', 'Futura', sans-serif;
+    border: 1px solid var(--color-secundario);
+    padding: 0.6rem;
+    border-radius: 8px;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+/* Responsive Base */
+.container {
+    padding: 1rem;
+}
+
+/* FORMULARIO DE CONTACTO */
+.form-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.form-image {
+    max-width: 40%;
+    height: auto;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 500px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.form-group i {
+    background-color: var(--color-secundario);
+    padding: 0.7rem;
+    border-radius: 8px;
+    color: white;
+    font-size: 1.1rem;
+    min-width: 44px;
+    text-align: center;
+}
+
+.form-group input, .form-group textarea {
+    flex: 1;
+    padding: 0.7rem;
+    font-size: 1rem;
+    border: 1px solid var(--color-secundario);
+    border-radius: 8px;
+    background-color: white;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contact-btn {
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-btn:hover {
+    background-color: var(--color-terciario);
+}
+
+
+
+.icono-contacto {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .info-contacto .icono-contacto {
+        max-width: 300px;
+    }
+}
+
+.input-group-text {
+    background-color: var(--color-secundario);
+    color: white;
+    border: none;
+    border-radius: 8px 0 0 8px;
+    font-size: 1.2rem;
+    padding: 0.7rem 1rem;
+}
+
+.form-control {
+    border: 1px solid var(--color-secundario);
+    border-radius: 0 8px 8px 0;
+    font-family: 'Jost', sans-serif;
+    padding: 0.7rem;
+}
+
+.input-group .form-control,
+.input-group-text {
+    height: 50px;
+}
+
+@media (min-width: 768px) {
+    .row {
+        align-items: stretch;
+    }
+
+    .info-contacto, .formulario-contacto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    flex: 1;
+}
+
+  /* HERO HOME */
+  .hero-home {
+    background-color: var(--color-fondo);
+    padding: 4rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-home h1 {
+    font-size: 2.5rem;
+    color: var(--color-primario);
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .hero-home p{
+    font-size: 1.2rem;
+    color: var(--color-texto);
+    max-width: 700px;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .hero-home .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero-home .btn-agenda,
+  .hero-home .btn-login{
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .hero-home {
+        padding: 6rem 2rem;
+    }
+
+    .hero-home h1 {
+        font-size: 3.5rem;
+        text-align: center;
+    }
+
+    .hero-home p {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .hero-home .hero-buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+  }
+ 
+  /* Imagen Churumbela */
+  .imagen-churumbela {
+    max-width: 250px;
+    border-radius: 50rem;
+    box-shadow: 0 4px 15px rbga(0,0,0,0.1);
+  }
+
+  /* Título */
+  .titulo-sobre-marca {
+    font-family: 'Source Serif Pro', serif;
+    font-weight: 700;
+    color: var(--color-primario);
+    font-size: 2rem;
+  }
+
+  /* Cuadro de descripción */
+  .descripcion-sobre-marca {
+    background-color: var(--color-claro);
+    border-radius: 1rem;
+    font-family: 'Jost', sans-serif;
+    font-size: 1rem;
+    color: var(--color-texto);
+    box-shadow: 0 4px 12px rgba(189, 88, 119, 0.15);
+  }
+
+  /* Botón Conócenos */
+  .btn-conocenos {
+    background-color: var(--color-primario);
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border-radius: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px rgba (189, 88, 119, 0.5);
+  }
+
+  .btn-conocenos:hoover {
+    background-color: var(--color-terciario);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px 5px rgba(189, 88, 119, 0.4);
+  }
+
+  /* Botones Generales */
+  .btn-explora,
+  .btn-cita {
+    background-color: var(--color-secundario);
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border-radius: 2rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10 rgba(116, 3, 84, 0.2);
+  }
+
+  .btn-explora:hoover,
+  .btn-cita:hoover {
+    background-color: var(--color-terciario);
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgba(116, 3, 84, 0.4);
+  }
+
+  /* Título */
+  .titulo-mas-amado {
+    font-family: 'Source Serif Pro', serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--color-primario);
+  }
+  
+  /* Imágenes de productos */
+  .imagen-producto {
+    width: 100%;
+    height: 300px; /* Tamaño uniforme */
+    object-fit: cover; /* Mantiene proporción sin deformar */
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .imagen-producto:hover {
+    transform: scale(1.03);
+  }
+  
+  /* Títulos de producto */
+  .nombre-producto {
+    font-family: 'Jost', sans-serif;
+    color: var(--color-texto);
+    font-weight: 500;
+  }
+
+  /* Imagen de fondo tipo marca de agua */
+  .marca-agua-section {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+  }
+
+  .marca-agua-section::before {
+    content: "";
+    background-image: url('./home-imagenes/anillo-compromiso.webp');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.4) blur(3px);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+  .overlay-text {
+    position: relative;
+    z-index: 1;
+  }
+
+  .titulo-marca-agua {
+    color: var(--color-primario);
+    font-style: italic;
+    font-size: 2rem;
+    font-family: 'Source Serif Pro', serif;
+  }
+
+  /* Cuador de texto */
+  .cuadro-beneficio {
+    background-color: var(--color-claro);
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    font-family: 'Jost', sans-serif;
+  }
+
+  /* Imagen del Diamante */
+  .imagen-diamantes {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50rem;
+  }
