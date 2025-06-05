@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us| Aurun Designers</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles-aboutUsJoyeria.css">
+    <link rel="stylesheet" href="../src/styles/styles.css">
+</head>
+
+<body class="bg-contacto">
+
+    <div class="wrapper">
+        <header class="border-bottom">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-custom px-4 container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img class="img-fluid" src="../src/img/logo.png" alt="Logo AD" style="max-height: 60px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+
+
+
+                    <ul class="navbar-nav mx-auto gap-lg">
+                        <li class="nav-item"><a class="nav-link" href="../home/home.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../aboutUsJoyeria/aboutUsJoyeria.html">About
+                                Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Catálogo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Nuestro Trabajo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Cotizador</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../contactUs/contactUs.html">Contacto</a></li>
+                    </ul>
+
+                    <div class="d-flex align-items-center gap-2">
+                        <a href="#" class="btn btn-agenda">Agenda tu Cita</a>
+                        <a href="#" class="btn btn-login">Login</a>
+                        <a href="#" class="ms-2 cart-icon"><i class="bi bi-cart"></i></a>
+                    </div>
+                </div>
+            </nav>
+
+        </header>
+        <main class="container my-4">
+            <section class="text-center mb-4 px-3">
+                <h1 class="titulo-about-us-joyeria">Aurum Designers</h1>
+                <h2 id="frase-historia">En Aurum Designer creemos que lo que vale, merece ser celebrado.</h2>
+            </section>
+            <!-- Carrusel nuestra historia -->
+
+            <div class="container my-4">
+                <div class="mx-auto" style="max-width: 800px;">
+                    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner rounded-4">
+                            <div class="carousel-item active ratio ratio-16x9" data-bs-interval="10000">
+                                <img src="./imagenes/historia2.webp" class="d-block w-100 img-fluid"
+                                    alt="Manos de un artesano ajustando un anillo con una herramienta sobre una base de trabajo en un taller de joyería.">
+                            </div>
+                            <div class="carousel-item ratio ratio-16x9" data-bs-interval="2000">
+                                <img src="./imagenes/historia3.webp" class="d-block w-100 img-fluid"
+                                    alt="Diseñadora de joyas dibujando bocetos con piezas doradas, perlas y herramientas sobre una mesa de trabajo creativa.">
+                            </div>
+                            <div class="carousel-item ratio ratio-16x9">
+                                <img src="./imagenes/historia4.webp" class="d-block w-100 img-fluid"
+                                    alt="Mujer sonriente trabajando en su taller de joyería, rodeada de herramientas y materiales de orfebrería.">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Texto nuestra historia -->
+            <div class="container my-4 text-center px-3 px-md-5">
+                <div class="mx-auto">
+                    <p class="mb-2 p-historia">
+                        Somos una joyería digital que combina diseño, intención y tecnología para ofrecer experiencias
+                        significativas en cada pieza.
+                        Creamos más que productos: diseñamos conexiones.
+                    </p>
+                    <p class="mb-2 p-historia">
+                        Cada joya cuenta una historia y cada detalle refleja nuestro compromiso con la calidad, la
+                        autenticidad y el lujo emocional.
+                    </p>
+                    <p class="mb-2 p-historia">
+                        Desde nuestra plataforma, te acompañamos a descubrir piezas que destacan por su diseño,
+                        propuestas innovadoras o accesibilidad sin perder elegancia. Nuestro ecosistema conecta
+                        historias, personas y momentos que merecen ser reconocidos.
+                    </p>
+                </div>
+            </div>
+            <!-- Mision, Vsion y valores -->
+
+
+            <!-- TESTIMONIOS -->
+            <div class="carousel-container">
+                <button class="carousel-controls carousel-prev" id="prevBtn">
+                    <i class="bi bi-chevron-left"></i>
+                </button>
+
+                <div class="carousel-wrapper">
+                    <div class="carousel-track" id="carouselTrack">
+
+                        <div class="carousel-slide">
+                            <div class="card h-100 shadow-sm border-0">
+                                <img src="-----" class="card-img-top"
+                                    alt="Andrea Eunice Aguirre López">
+                                <div class="card-body d-flex flex-column">
+                                    <p class="card-text text-muted flex-grow-1">"Cada pieza tiene alma. Mi anillo personalizado es una verdadera obra de arte.</p>
+                                    <cite>-Cliente feliz</cite>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <div class="card h-100 shadow-sm border-0">
+                                <img src="-----" class="card-img-top"
+                                    alt="Andrea Eunice Aguirre López">
+                                <div class="card-body d-flex flex-column">
+                                    <p class="card-text text-muted flex-grow-1">"Cada pieza tiene alma. Mi anillo personalizado es una verdadera obra de arte.</p>
+                                    <cite>-Cliente feliz</cite>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <div class="card h-100 shadow-sm border-0">
+                                <img src="-----" class="card-img-top"
+                                    alt="Andrea Eunice Aguirre López">
+                                <div class="card-body d-flex flex-column">
+                                    <p class="card-text text-muted flex-grow-1">"Cada pieza tiene alma. Mi anillo personalizado es una verdadera obra de arte.</p>
+                                    <cite>-Cliente feliz</cite>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <div class="card h-100 shadow-sm border-0">
+                                <img src="-----" class="card-img-top"
+                                    alt="Andrea Eunice Aguirre López">
+                                <div class="card-body d-flex flex-column">
+                                    <p class="card-text text-muted flex-grow-1">"Cada pieza tiene alma. Mi anillo personalizado es una verdadera obra de arte.</p>
+                                    <cite>-Cliente feliz</cite>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <div class="card h-100 shadow-sm border-0">
+                                <img src="-----" class="card-img-top"
+                                    alt="Andrea Eunice Aguirre López">
+                                <div class="card-body d-flex flex-column">
+                                    <p class="card-text text-muted flex-grow-1">"Cada pieza tiene alma. Mi anillo personalizado es una verdadera obra de arte.</p>
+                                    <cite>-Cliente feliz</cite>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-slide">
+                            <div class="card h-100 shadow-sm border-0">
+                                <img src="-----" class="card-img-top"
+                                    alt="Andrea Eunice Aguirre López">
+                                <div class="card-body d-flex flex-column">
+                                    <p class="card-text text-muted flex-grow-1">"Cada pieza tiene alma. Mi anillo personalizado es una verdadera obra de arte.</p>
+                                    <cite>-Cliente feliz</cite>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <button class="carousel-controls carousel-next" id="nextBtn">
+                    <i class="bi bi-chevron-right"></i>
+                </button>
+
+                <!-- Indicadores del carrusel -->
+                <div class="carousel-indicators" id="carouselIndicators"></div>
+            </div>
+
+
+
+        </main>
+
+
+    </div>
+    <footer class="footer-contacto">
+
+        <div class="container">
+            <div class="row text-center text-md-start">
+                <div class="col-12 col-md-4 mb-4 mb-md-0">
+                    <h5 class="mb-2 text-center text-md-start">Nuestras redes sociales</h5>
+                    <div class="d-flex justify-content-between justify-content-md-start gap-3 mx-4 social-icons ">
+                        <a href="#"><i class="bi bi-tiktok fs-4"></i></a>
+                        <a href="#"><i class="bi bi-whatsapp fs-4"></i></a>
+                        <a href="#"><i class="bi bi-instagram fs-4"></i></a>
+                    </div>
+                    <p class="text-center text-md-start">Conéctate con nosotros para no perderte ninguna novedad.
+                    </p>
+                </div>
+
+                <!-- Sección 2: Enlaces Útiles -->
+                <div class="col-12 col-md-4 mb-4 mb-md-0">
+                    <h5>Enlaces Útiles</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none">Inicio</a></li>
+                        <li><a href="../src/documents/DocumentoLegal.pdf" class="text-decoration-none">Terminos y
+                                condiciones</a></li>
+                        <li><a href="../src/documents/DocumentoLegal.pdf" class="text-decoration-none">Avisos
+                                legales</a></li>
+                        <li><a href="#" class="text-decoration-none">Mision, Vision y Valores</a></li>
+                    </ul>
+                </div>
+
+                <!-- Sección 3: Contacto -->
+                <div class="col-12 col-md-4">
+                    <h5>Contacto</h5>
+                    <p class="mb-1">Email: info@ejemplo.com</p>
+                    <p class="mb-1">Tel: (52) 456-7890</p>
+                    <p class="mb-0">Dirección: Calle Ficticia 123, Guadalajara</p>
+                </div>
+            </div>
+
+            <hr class="bg-light">
+
+            <div class="text-center">
+                <p class="mb-0">© 2025 Aurum Designers. Todos los derechos reservados.</p>
+
+
+                <p>© 2025 Development by <a href="../aboutUs/aboutUs.html" id="link-sprintasticos">Sprintásticos.</a>
+                    Todos los derechos
+                    reservados.</p>
+
+            </div>
+    </footer>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
