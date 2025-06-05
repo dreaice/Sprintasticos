@@ -45,7 +45,7 @@ a:hover {
 }
 
 /* Botones */
-button, .btn {
+button, .btn-modificado {
     font-family: 'Jost', 'Futura', sans-serif;
     font-weight: 500;
     background-color: var(--color-primario);
@@ -57,7 +57,7 @@ button, .btn {
     transition: backgroun-color 0.3s ease;
 }
 
-button:hover, .btn:hover {
+button:hover, .btn-modificado:hover {
     background-color: var(--color-terciario);
 }
 
@@ -142,29 +142,7 @@ textarea {
     background-color: var(--color-terciario);
 }
 
-footer {
-    background-color: var(--color-claro);
-    color: black;
-    text-align: center;
-    padding: 2rem 1rem;
-    font-family: 'Jost', sans-serif;
-}
 
-footer h4 {
-    font-family: 'Source Serif Pro', serif;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-}
-
-footer p, footer a {
-    font-size: 0.9rem;
-    color: black;
-}
-
-footer a:hover {
-    color: var(--color-claro);
-}
 
 .icono-contacto {
     max-width: 100%;
@@ -237,74 +215,6 @@ body {
 .wrapper {
     flex: 1;
 }
-/* nav bar*/
-.navbar-custom {
-    background-color: var(--color-fondo);
-    border-bottom: 2px solid var(--color-claro);
-  }
-  
-  .nav-link {
-    color: var(--color-texto) !important;
-    font-weight: 500;
-    position: relative;
-    transition: color 0.3s ease;
-  }
-  
-  .nav-link::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background-color: var(--color-terciario);
-    bottom: -4px;
-    left: 0;
-    transition: width 0.3s ease;
-  }
-  
-  .nav-link:hover::after {
-    width: 100%;
-  }
-  
-  .btn-agenda, .btn-login {
-    font-size: 0.9rem;
-    border-radius: 1rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 5px rgba(189, 88, 119, 0.5);
-  }
-  
-  .btn-agenda {
-    background-color: var(--color-terciario);
-    color: white;
-  }
-  
-  .btn-login {
-    background-color: var(--color-secundario);
-    color: white;
-  }
-  
-  .btn-agenda:hover, .btn-login:hover {
-    box-shadow: 0 0 10px 5px rgba(189, 88, 119, 0.8);
-    transform: scale(1.05);
-  }
-  
-  .cart-icon {
-    font-size: 1.5rem;
-    color: var(--color-texto);
-    transition: color 0.3s ease;
-  }
-  
-  .cart-icon:hover {
-    color: var(--color-terciario);
-  }
-  .gap-lg .nav-item {
-    margin: 0 1.2rem; 
-  } 
-
-  .logo-navbar {
-    max-width: 60px;
-    height: auto;
-    width: auto;
-  }
 
   /* HERO HOME */
   .hero-home {
