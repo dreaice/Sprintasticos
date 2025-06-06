@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/styles.css">
+    <title>Registro de Usuario</title>
+</head>
+
+<body>
+    <nav>
+        <h1>Aqui copiamos el nav que tenemos</h1>
+    </nav>
+
+    <main>
+        <section class="formulario-registro">
+            <h2>Formulario de Registro</h2>
+            <form id="formularioRegistro" action="#" method="POST">
+                <div class="campo-formulario">
+                    <label for="nombres">Nombre(s):</label>
+                    <input type="text" id="nombres" name="nombres" required>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="apellidoPaterno">Apellido Paterno:</label>
+                    <input type="text" id="apellidoPaterno" name="apellidoPaterno" required>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="apellidoMaterno">Apellido Materno:</label>
+                    <input type="text" id="apellidoMaterno" name="apellidoMaterno">
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+                    <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+                </div>
+
+                <div class="campo-formulario">
+                    <label>Género:</label>
+                    <div class="opciones-genero">
+                        <input type="radio" id="hombre" name="genero" value="hombre" required>
+                        <label for="hombre">Hombre</label>
+                        <input type="radio" id="mujer" name="genero" value="mujer" required>
+                        <label for="mujer">Mujer</label>
+                    </div>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="direccion">Dirección:</label>
+                    <textarea id="direccion" name="direccion" required></textarea>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="contrasena">Contraseña:</label>
+                    <input type="password" id="contrasena" name="contrasena" required>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="confirmarContrasena">Confirmar Contraseña:</label>
+                    <input type="password" id="confirmarContrasena" name="confirmarContrasena" required>
+                </div>
+
+                <button type="submit">Registrarse</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Aqui copiamos el footer que tenemos</p>
+    </footer>
+
+
+    <script src="register.js"></script>
+</body>
+
+</html>
