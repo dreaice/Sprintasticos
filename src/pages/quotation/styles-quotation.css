@@ -1,0 +1,209 @@
+/* Fuente Principal y Secundaria */
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500&family=Source+Serif+Pro:wght@400;700&display=swap');
+
+/* Paleta de colores */
+:root {
+    --color-primario: #740354;
+    --color-secundario: #B99FC1;
+    --color-terciario: #BD5877;
+    --color-claro: #FDCBC9;
+    --color-texto: #343434;
+    --color-fondo: #FFFBF5;
+}
+
+/* Hover para la seleccion de la gema */
+.gem-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .gem-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    
+  }
+
+  .img-rounded {
+  border-radius: 3.125rem;
+}
+  .hover-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(255, 255, 255, 0.9);
+    color: var(--color-texto);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .gem-container:hover .hover-content {
+    opacity: 1;
+  }
+
+  .parrafo-body{
+    font-size: clamp(1.4rem, 1.8vw, 1.6rem); ;
+  }
+
+  .hover-content p {
+  padding: 0.5rem 0.5rem;
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+  font-weight: 500;
+  background-color: transparent;
+  border-radius: 4px;
+  }
+
+  .hover-content h6 {
+  font-size: clamp(1.7rem, 2.5vw, 2rem);
+  margin-bottom: 0.5rem;
+  background-color: transparent;
+  }
+
+  .hover-content button {
+    padding: 8px 16px;
+    background-color: var(--color-terciario);
+    color: var(--color-texto);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 8px;
+    font-family: 'Jost', 'Futura', sans-serif;
+    font-weight: 500;
+    color: white;
+    padding: 0.5rem 1.2rem;
+  }
+
+  .hover-content button:hover {
+    background-color: var(--color-primario);
+    color: var(--color-fondo);
+}
+
+figcaption {
+    color: var(--color-texto); 
+    font-family: 'Jost', sans-serif;
+    font-size: 1rem;
+  }
+
+legend {
+    color: var(--color-texto); 
+    font-family: 'Jost', sans-serif;
+    font-size: 1.5rem;
+  }
+
+  .forma-img.seleccionada {
+  border: 3px solid var(--color-primario); 
+  box-shadow: 0 0 10px var(--color-terciario);
+  border-radius: 0.5rem;
+}
+/* Estilos de los sliders */
+    .slider-wrapper {
+      margin-bottom: 1rem;
+    }
+
+    .slider-labels {
+      font-family: 'Jost', sans-serif;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      margin-top: 0.25rem;
+      padding: 0 0.5rem;
+      color: var(--color-texto);
+    }
+    .custom-slider  .noUi-connect {
+      background: var(--color-primario);
+    }
+    .custom-slider .noUi-handle {
+      border: 0.2rem solid var(--color-primario);
+      width: 2rem;
+      height: 2rem;
+      top: -0.5rem;
+      border-radius: 10%;
+      cursor: pointer;
+    }
+    .noUi-touch-area{
+      background-color:var(--color-terciario);
+    }
+
+   .form-check-input:checked {
+  background-color: var(--color-primario);
+  border-color: var(--color-primario);
+}
+
+    .boton-home{
+      font-family: 'Jost', 'Futura', sans-serif;
+      font-weight: 500;
+      background-color: var(--color-secundario);
+      color: var(--color-fondo);
+      border: none;
+      padding: 0.5rem 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: backgroun-color 0.3s ease; 
+    }
+
+    .boton-home:hover {
+    background-color: var(--color-terciario);
+    }
+    
+    .boton-cotizar{
+      font-family: 'Jost', 'Futura', sans-serif;
+      font-weight: 500;
+      background-color: var(--color-terciario);
+      color: var(--color-fondo);
+      border: none;
+      padding: 0.5rem 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: backgroun-color 0.3s ease; 
+    }
+
+    .boton-cotizar:hover {
+    background-color: var(--color-primario);
+    color: var(--color-fondo);
+    }
+
+    #cotizarModal {
+        background-color: rgba(var(--color-fondo), 0.5);
+    }
+
+    .modal-dialog{
+        background-color: rgba(var(--color-fondo), 0.5);
+    }
+
+    .modal-content {
+        background-color: var(--color-terciario);
+        font-family: 'Source Serif Pro', serif;
+        color: var(--color-fondo);
+    }
+    .modal-content p{
+        font-family: 'Source Serif Pro', serif;
+        color: var(--color-texto);
+        color: var(--color-fondo);
+    }
+    .boton-cita{
+      font-family: 'Jost', 'Futura', sans-serif;
+      font-weight: 500;
+      background-color: var(--color-secundario);
+      color: var(--color-fondo);
+      border: none;
+      padding: 0.5rem 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: backgroun-color 0.3s ease; 
+    }
+    .boton-cita:hover{
+      background-color: var(--color-primario);
+      color: var(--color-fondo);
+    }
+
+   
+    
