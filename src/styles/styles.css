@@ -206,5 +206,14 @@ footer a:hover {
   width: 100%;
 }
 
+input.form-control {
+  background-color: #FDD6DB;
+  border: none;
+}
+
+.input-group-text {
+  background-color: #FDD6DB;
+  border: none;
+}
 
 
