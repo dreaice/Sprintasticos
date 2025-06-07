@@ -1,0 +1,12 @@
+.boton-enviar {
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .boton-enviar:hover {
+    background-color: var(--color-terciario); 
+    transform: scale(1.02); 
+    cursor: pointer;
+  }
