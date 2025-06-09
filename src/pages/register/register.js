@@ -54,4 +54,9 @@ document.getElementById('formularioRegistro').addEventListener('submit', functio
     `;
     document.getElementById('alertContainer').innerHTML = alertaHTML;
   }
+
+  // Función para resetear el formulario
+  function limpiarFormulario() {
+    document.getElementById("formularioRegistro").reset();
+  }
   

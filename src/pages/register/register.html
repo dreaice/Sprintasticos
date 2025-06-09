@@ -12,7 +12,43 @@
 </head>
 
 <body class="bg-light">
+ <header class="border-bottom">
 
+            <nav class="navbar navbar-expand-lg navbar-custom px-4 container-fluid">
+                <a class="navbar-brand" href="#">
+
+
+
+                    <img class="img-fluid" src="../../resources/img/logo.png" alt="Logo AD" style="max-height: 60px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+
+
+
+
+                    <ul class="navbar-nav mx-auto gap-lg">
+                        <li class="nav-item"><a class="nav-link" href="./../../../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./../aboutUsJewelry/aboutUsJoyeria.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Catálogo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Nuestro Trabajo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./../quotation/quotation.html">Cotizador</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./../contactUs/contactUs.html">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./../admin/admin.html">Administrador</a></li>
+                    </ul>
+            
+                    <div class="d-flex align-items-center gap-2">
+                        <a href="#" class="btn btn-agenda">Agenda tu Cita</a>
+                        <a href="#" class="btn btn-login">Login</a>
+                        <a href="#" class="ms-2 cart-icon"><i class="bi bi-cart"></i></a>
+                    </div>
+                </div>
+            </nav>
+        </header>
   <div class="container-fluid min-vh-100 d-flex align-items-center justify-content-center" style="background-color: var(--color-fondo);">
     <div class="row w-100 shadow rounded overflow-hidden align-items-center" style="max-width: 900px; min-height: 600px;">
       <!-- Logo -->
@@ -54,7 +90,7 @@
 
           <div class="d-flex justify-content-between mt-4">
             <button type="submit" class="btn w-50 me-2" style="background-color: var(--color-primario); color: white; border-radius: 1rem;">Crear cuenta</button>
-            <button type="button" class="btn w-50 ms-2" style="background-color: var(--color-secundario); color: white; border-radius: 1rem;">Cancelar</button>
+            <button type="button" class="btn w-50 ms-2" style="background-color: var(--color-secundario); color: white; border-radius: 1rem;" onclick="limpiarFormulario()">Cancelar</button>
           </div>
         </form>
       </div>
@@ -97,7 +133,7 @@
 
       <div class="text-center">
         <p class="mb-0">© 2025 Aurum Designers. Todos los derechos reservados.</p>
-        <p>© 2025 Development by <a href="../aboutUs/aboutUs.html" id="link-sprintasticos">Sprintásticos.</a> Todos los derechos reservados.</p>
+        <p>© 2025 Development by <a href="../team/team.html" id="link-sprintasticos">Sprintásticos.</a> Todos los derechos reservados.</p>
       </div>
     </div>
   </footer>
