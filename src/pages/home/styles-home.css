@@ -8,7 +8,7 @@
       rgba(116, 3, 84, 0.6),
       rgba(116, 3, 84, 0.6)
     ),
-    url('ruta-de-tu-imagen-hero.jpg') no-repeat center/cover;
+    url('./home-imagenes/anillo-compromiso.webp') no-repeat center/cover;
   height: 70vh;
   display: flex;
   flex-direction: column;
@@ -32,7 +32,7 @@
   font-family: var(--fuente-cuerpo);
 }
 
-/* Sección de servicios o características */
+/* Sección de servicios */
 .services {
   padding: 3rem 1rem;
   background-color: var(--color-fondo);
@@ -81,7 +81,7 @@
   margin: 3rem 1rem;
 }
 
-/* Sección destacados (ejemplo cards en grid) */
+/* Sección destacados */
 .featured {
   padding: 3rem 1rem;
   display: grid;
@@ -89,7 +89,84 @@
   gap: 2rem;
 }
 
-/* Responsive básico */
+/* Imagen de diamantes */
+.imagen-diamantes {
+  max-width: 100%;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imagen-diamantes:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Sección con imagen como marca de agua */
+.marca-agua-section {
+  position: relative;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: var(--color-fondo);
+}
+
+/* Imagen como fondo con opacidad baja para efecto de marca de agua */
+.marca-agua-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('./home-imagenes/anillo-compromiso.webp') no-repeat center/cover;
+  opacity: 0.5; 
+  z-index: 1;
+}
+
+/* Texto sobre la marca de agua */
+.overlay-text {
+  position: relative;
+  z-index: 2;
+  color: var(--color-primario); 
+  font-family: var(--fuente-titulos);
+  background: none; 
+}
+
+.titulo-marca-agua {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+
+
+.descripcion-sobre-marca {
+  background-color: var(--color-terciario);
+  color: white;
+  border-radius: 12px;
+  font-family: var(--fuente-cuerpo);
+  font-size: 1.1rem;
+}
+
+.titulo-sobre-marca {
+  font-family: var(--fuente-titulos);
+  font-weight: 700;
+  color: var(--color-primario);
+}
+
+
+/* Hover imágenes de productos */
+.imagen-producto {
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imagen-producto:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(116, 3, 84, 0.2);
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2rem;
@@ -99,8 +176,23 @@
     font-size: 1rem;
   }
 
-  .services, .featured {
+  .services,
+  .featured {
     grid-template-columns: 1fr;
     padding: 2rem 1rem;
+  }
+
+  .marca-agua-section {
+    height: auto;
+    padding: 1.5rem;
+  }
+
+  .texto-sobre-imagen {
+    font-size: 1.5rem;
+  }
+
+  .sobre-la-marca {
+    padding: 1.5rem;
+    font-size: 1rem;
   }
 }
