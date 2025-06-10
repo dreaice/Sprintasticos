@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registro de Artículo - Administrador</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="../../styles/styles.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-light min-vh-100 d-flex flex-column justify-content-between">
+    <header class="border-bottom">
+
+        <nav class="navbar navbar-expand-lg navbar-custom px-4 container-fluid">
+            <a class="navbar-brand" href="#">
+    
+    
+    
+                <img class="img-fluid" src="../../resources/img/logo.png" alt="Logo AD" style="max-height: 60px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+    
+    
+    
+    
+                <ul class="navbar-nav mx-auto gap-lg">
+                    <li class="nav-item"><a class="nav-link" href="../../../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../aboutUsJewelry/aboutUsJoyeria.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../">Catálogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../aboutUsJewelry/aboutUsJoyeria.html">Nuestro Trabajo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../quotation/quotation.html">Cotizador</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../contactUs/contactUs.html">Contacto</a></li>
+                </ul>
+        
+                <div class="d-flex align-items-center gap-2">
+                    <a href="#" class="btn btn-agenda">Agenda tu Cita</a>
+                    <a href="#" class="btn btn-login">Login</a>
+                    <a href="#" class="ms-2 cart-icon"><i class="bi bi-cart"></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+  <main class="flex-grow-1 d-flex align-items-center justify-content-center bookbody">
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10 col-sm-12 bg-white p-4 shadow rounded">
+          <h1 class="text-center mb-3">Registrar Artículo de Joyería</h1>  
+          <form id="formulario-articulo" novalidate>
+            <legend class="text-center text-muted mb-4">Completa los datos del artículo</legend>
+
+            <div class="mb-3">
+              <label for="titulo" class="form-label fw-semibold">Titulo del articulo:</label>
+              <input type="text" id="titulo" name="titulo" class="form-control" placeholder="Título del artículo" required />
+            </div>
+
+            <div class="mb-3">
+              <label for="descripcion" class="form-label fw-semibold">Descripción detallada:</label>
+              <textarea id="descripcion" name="descripcion" class="form-control" rows="4" placeholder="Descripción completa" required></textarea>
+            </div>
+
+            <div class="mb-3">
+              <label for="categoria" class="form-label fw-semibold">Categoría:</label>
+              <select id="categoria" name="categoria" class="form-select" required>
+                <option value="" disabled selected>Selecciona una categoría</option>
+                <option value="Anillos">Anillos</option>
+                <option value="Collares">Collares</option>
+                <option value="Pulseras">Pulseras</option>
+                <option value="Aretes">Aretes</option>
+                <option value="Relojes">Relojes</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="materiales" class="form-label fw-semibold">Materiales:</label>
+              <select id="materiales" name="materiales" class="form-select" multiple required>
+                <option value="Oro">Oro</option>
+                <option value="Plata">Plata</option>
+                <option value="Platino">Platino</option>
+                <option value="Diamante">Diamante</option>
+                <option value="Esmeralda">Esmeralda</option>
+                <option value="Zafiro">Zafiro</option>
+              </select>
+              <small class="form-text text-muted">Mantén presionada la tecla Ctrl (Cmd en Mac) para seleccionar múltiples</small>
+            </div>
+
+            <div class="mb-3">
+              <label for="precio" class="form-label fw-semibold">Precio fijo (MXN):</label>
+              <input type="number" id="precio" name="precio" min="0" step="0.01" class="form-control" placeholder="Precio fijo" required />
+            </div>
+
+            <div class="mb-3">
+              <label for="imagenes" class="form-label fw-semibold">Imágenes:</label>
+              <input type="file" id="imagenes" name="imagenes" class="form-control" multiple accept="image/*" required />
+            </div>
+
+            <fieldset class="mb-3 border rounded p-3">
+              <legend class="fs-6 fw-semibold">Stock y variantes</legend>
+
+              <div class="row g-3 align-items-end">
+                <div class="col-sm-4">
+                  <label for="talla" class="form-label">Talla:</label>
+                  <select id="talla" class="form-select" required>
+                    <option value="" disabled selected>Selecciona talla</option>
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                  </select>
+                </div>
+
+                <div class="col-sm-4">
+                  <label for="color" class="form-label">Color:</label>
+                  <select id="color" class="form-select" required>
+                    <option value="" disabled selected>Selecciona color</option>
+                    <option value="Oro">Oro</option>
+                    <option value="Plata">Plata</option>
+                    <option value="Negro">Negro</option>
+                    <option value="Blanco">Blanco</option>
+                  </select>
+                </div>
+
+                <div class="col-sm-3">
+                  <label for="cantidad" class="form-label">Cantidad:</label>
+                  <input type="number" id="cantidad" class="form-control" min="1" value="1" required />
+                </div>
+
+                <div class="col-sm-1 d-grid">
+                  <button type="button" id="btn-agregar-stock" class="btn btn-primary" title="Agregar variante"><i class="bi bi-plus-lg"></i></button>
+                </div>
+              </div>
+
+              <ul id="lista-stock" class="list-group mt-3"></ul>
+            </fieldset>
+
+            <div id="alerta-container" class="mb-3"></div>
+
+            <button type="button" id="btn-vista-previa" class="btn btn-success w-100 mb-3">Validar y confirmar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer-contacto">
+    <div class="container">
+      <div class="row text-center text-md-start">
+        <div class="col-12 col-md-4 mb-4 mb-md-0">
+          <h5 class="mb-2 text-center text-md-start">
+            Nuestras redes sociales
+          </h5>
+          <div
+            class="d-flex justify-content-between justify-content-md-start gap-3 mx-4 social-icons "
+          >
+            <a href="#"><i class="bi bi-tiktok fs-4"></i></a>
+            <a href="#"><i class="bi bi-whatsapp fs-4"></i></a>
+            <a href="#"><i class="bi bi-instagram fs-4"></i></a>
+          </div>
+          <p class="text-center text-md-start">
+            Conéctate con nosotros para no perderte ninguna novedad.
+          </p>
+        </div>
+
+        <div class="col-12 col-md-4 mb-4 mb-md-0">
+          <h5>Enlaces Útiles</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-decoration-none">Inicio</a></li>
+            <li>
+              <a
+                target="_blank"
+                href="../src/documents/DocumentoLegal.pdf"
+                class="text-decoration-none"
+                >Terminos y condiciones</a
+              >
+            </li>
+            <li>
+              <a
+                target="_blank"
+                href="../src/documents/DocumentoLegal.pdf"
+                class="text-decoration-none"
+                >Avisos legales</a
+              >
+            </li>
+            <li><a href="#" class="text-decoration-none">Mision, Vision y Valores</a></li>
+          </ul>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <h5>Contacto</h5>
+          <p class="mb-1">Email: info@ejemplo.com</p>
+          <p class="mb-1">Tel: (52) 456-7890</p>
+          <p class="mb-0">Dirección: Calle Ficticia 123, Guadalajara</p>
+        </div>
+      </div>
+
+      <hr class="bg-light" />
+      <div class="text-center">
+        <p class="mb-0">© 2025 Aurum Designers. Todos los derechos reservados.</p>
+        <p>
+          © 2025 Development by
+          <a href="../aboutUs/aboutUs.html" id="link-sprintasticos">Sprintásticos.</a>
+          Todos los derechos reservados.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal fade" id="modalVistaPrevia" tabindex="-1" aria-labelledby="modalVistaPreviaLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalVistaPreviaLabel">Vista previa del artículo</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body" id="contenido-vista-previa"></div>
+        <div class="modal-footer">
+          <button type="button" id="btn-editar" class="btn btn-secondary" data-bs-dismiss="modal">Editar</button>
+          <button type="button" id="btn-confirmar" class="btn btn-primary">Confirmar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="js/main.js" type="module"></script>
+</body>
+</html>
