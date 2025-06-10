@@ -1,264 +1,256 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Formulario Cotización</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cotizador Diamantes</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/nouislider@15.7.0/dist/nouislider.min.css" rel="stylesheet">
-  <link href="./styles-cotizador.css" rel="stylesheet">
-  <link rel="stylesheet" href="../src/styles/styles.css">
-
+  <link href="./styles-quotation.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../../styles/styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/nouislider@15.7.0/dist/nouislider.min.js"></script>
+  <script src="./form.js" defer></script>
 </head>
 
-
-
 <body>
-<!-- Barra de Navegacion -->
-    <header class="border-bottom">
-
-            <nav class="navbar navbar-expand-lg navbar-custom px-4 container-fluid">
-                <a class="navbar-brand" href="#">
-
-
-
-                    <img class="img-fluid" src="../src/img/logo.png" alt="Logo AD" style="max-height: 60px;">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            
-                <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
-
-
-
-
-                    <ul class="navbar-nav mx-auto gap-lg">
-                        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../aboutUs/aboutUs.html">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Catálogo</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Nuestro Trabajo</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../cotizador/cotizador.html">Cotizador</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
-                    </ul>
-            
-                    <div class="d-flex align-items-center gap-2">
-                        <a href="#" class="btn btn-agenda">Agenda tu Cita</a>
-                        <a href="#" class="btn btn-login">Login</a>
-                        <a href="#" class="ms-2 cart-icon"><i class="bi bi-cart"></i></a>
-                    </div>
-                </div>
-            </nav>
-        </header>
-
-
-<main class="container py-5">
- <h2 class="text-center mb-2">Cotiza tu diamante</h2>
-  <form class="row d-flex justify-content-center align-items-center vh-70">
-<!-- columna de forma y quilates -->
-    <section class="col-12 col-md-12 col-lg-6 p-4 pt-0 pb-0"> 
-    <!-- Forma -->
-   <fieldset class="mb-1">
-      <legend class="form-label">Forma</legend>
-      <section class="d-flex flex-wrap justify-content-center gap-3">
-        <figure class="d-flex flex-column align-items-center">
-        <img src="./imagenes/redondoForma.webp" alt="Forma Redonda" class="img-thumbnail forma-img" data-forma="Redondo" style="width: 5rem; height: 5rem; cursor: pointer;">
-        <figcaption class="text-center mt-2">Redondo</figcaption>
-      </figure>
-      <figure>
-        <img src="./imagenes/rectanguloForma.webp" alt="Forma Rectangular" class="img-thumbnail forma-img" data-forma="Rectangular" style="width: 5rem; height: 5rem; cursor: pointer;">
-        <figcaption class="text-center mt-2">Rectangulo</figcaption>
-      </figure> 
-      <figure>
-        <img src="./imagenes/asscherForma.webp" alt="Forma Asscher" class="img-thumbnail forma-img" data-forma="Asscher"  style="width: 5rem; height: 5rem; cursor: pointer;">
-        <figcaption class="text-center mt-2">Asscher</figcaption>
-      </figure>
-      <figure>
-        <img src="./imagenes/cojinForma.webp" alt="Forma Cojin" class="img-thumbnail forma-img" data-forma="Cojin" style="width: 5rem; height: 5rem; cursor: pointer;">
-        <figcaption class="text-center mt-2">Cojin</figcaption>
-      </figure>
-      <figure>
-        <img src="./imagenes/corazonForma.webp" alt="Forma Corazon" class="img-thumbnail forma-img" data-forma="Corazon" style="width: 5rem; height: 5rem; cursor: pointer;">
-        <figcaption class="text-center mt-2">Corazon</figcaption>
-      </figure>
-      <figure>
-        <img src="./imagenes/cuadradoForma.webp" alt="Forma Cuadrado" class="img-thumbnail forma-img" data-forma="Cuadrado"  style="width: 5rem; height: 5rem; cursor: pointer;">
-        <figcaption class="text-center mt-2">Cuadrado</figcaption>
-      </figure>
-      <figure>
-        <img src="./imagenes/ovaladoForma.webp" alt="Forma Ovalado" class="img-thumbnail forma-img" data-forma="Ovalado"  style="width: 5rem; height: 5rem; cursor: pointer;">
-        <figcaption class="text-center mt-2">Ovalado</figcaption>
-      </figure>
-      <figure>
-        <img src="./imagenes/marquesaForma.webp" alt="Forma Marquesa" class="img-thumbnail forma-img" data-forma="Marquesa"  style="width: 5rem; height: 5rem; cursor: pointer;">
-        <figcaption class="text-center mt-2">Marquesa</figcaption>
-      </figure>
-      <figure>
-        <img src="./imagenes/radianteForma.webp" alt="Forma Radiante" class="img-thumbnail forma-img" data-forma="Radiante" style="width: 5rem; height: 5rem; cursor: pointer;">
-        <figcaption class="text-center mt-2">Radiante</figcaption>
-      </figure>
-      <figure>
-        <img src="./imagenes/peraForma.webp" alt="Forma Pera" class="img-thumbnail forma-img" data-forma="Pera"  style="width: 5rem; height: 5rem; cursor: pointer;">
-        <figcaption class="text-center mt-2">Pera</figcaption>
-      </figure>
-      </section>
-    </fieldset>
-
-    <!-- Quilates -->
-    <fieldset class="slider-wrapper">
-      <legend class="form-label">Quilates</legend>
-      <div id="quilates-slider" class="custom-slider"></div>
-        <legend class="slider-labels mt-2">
-        <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
-        </legend>
-
-        <div class="d-flex justify-content-between align-items-center gap-2">
-          <label> Mín: <input type="number" id="min-quilates" class="form-control form-control-sm" style="width: 80px;"> </label>
-          <label> Máx: <input type="number" id="max-quilates" class="form-control form-control-sm" style="width: 80px;">
-          </label>
+  <!-- Barra de Navegación -->
+  <header class="border-bottom">
+    <nav class="navbar navbar-expand-lg navbar-custom px-4 container-fluid">
+      <a class="navbar-brand" href="#">
+        <img class="img-fluid" src="../../resources/img/logo.png" alt="Logo AD" style="max-height: 60px;" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+        <ul class="navbar-nav mx-auto gap-lg">
+          <li class="nav-item"><a class="nav-link" href="../../../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="../aboutUsJewelry/aboutUsJewelry.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Nuestro Trabajo</a></li>
+          <li class="nav-item"><a class="nav-link" href="../cotizador/cotizador.html">Cotizador</a></li>
+          <li class="nav-item"><a class="nav-link" href="../contactUs/contactUs.html">Contacto</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-2">
+          <a href="../bookAppointment/bookAppointment.html" class="btn btn-agenda">Agenda tu Cita</a>
+          <a href="../register/register.html" class="btn btn-login">Login</a>
+          <a href="#" class="ms-2 cart-icon"><i class="bi bi-cart"></i></a>
         </div>
-
-      
-    </fieldset>
-
-    
-    
-    </section>
-<!-- columna de corte, color claridad fluorescencia y cerficado -->
-    <section class="col-12 col-md-12 col-lg-6 p-4 pt-0">
-
-    <!-- Corte -->
-    <fieldset class="slider-wrapper">
-      <legend class="form-label">Corte</legend>
-      <div id="corte-slider" class="custom-slider"></div>
-      <div class="slider-labels">
-        <span>Excelente</span><span>Muy Bueno</span><span>Bueno</span><span>Aceptable</span><span>Deficiente</span>
       </div>
-    </fieldset>
+    </nav>
+  </header>
 
-    <!-- Color -->
-    <fieldset class="slider-wrapper">
-      <legend class="form-label">Color</legend>
-      <div id="color-slider" class="custom-slider"></div>
-      <div class="slider-labels">
-        <span>D</span><span>E</span><span>F</span><span>G</span><span>H</span><span>I</span><span>J</span>
+  <main class="container py-5">
+    <h2 class="text-center mb-2">Cotiza tu diamante</h2>
+    <form id="formDiamante" class="row d-flex justify-content-center align-items-center vh-70">
+      <!-- Columna Izquierda -->
+      <section class="col-lg-6 p-4">
+        <!-- Forma -->
+        <fieldset class="mb-3">
+          <legend class="form-label">Forma</legend>
+          <section class="d-flex flex-wrap justify-content-center gap-3">
+            <figure class="d-flex flex-column align-items-center figura-hover">
+              <img src="./img/redondoForma.webp" alt="Forma Redondo" class="img-thumbnail forma-img"
+                data-forma="Redondo" style="width: 5rem; height: 5rem; cursor: pointer;">
+              <figcaption class="mt-2">Redondo</figcaption>
+            </figure>
+            <figure class="d-flex flex-column align-items-center figura-hover">
+              <img src="./img/rectanguloForma.webp" alt="Forma Rectangular" class="img-thumbnail forma-img"
+                data-forma="Rectangular" style="width: 5rem; height: 5rem; cursor: pointer;">
+              <figcaption class="mt-2">Rectangulo</figcaption>
+            </figure>
+            <figure class="d-flex flex-column align-items-center figura-hover">
+              <img src="./img/asscherForma.webp" alt="Forma Asscher" class="img-thumbnail forma-img"
+                data-forma="Asscher" style="width: 5rem; height: 5rem; cursor: pointer;">
+              <figcaption class="mt-2">Asscher</figcaption>
+            </figure>
+            <figure class="d-flex flex-column align-items-center figura-hover">
+              <img src="./img/cojinForma.webp" alt="Forma Cojin" class="img-thumbnail forma-img" data-forma="Cojin"
+                style="width: 5rem; height: 5rem; cursor: pointer;">
+              <figcaption class="mt-2">Cojin</figcaption>
+            </figure>
+            <figure class="d-flex flex-column align-items-center figura-hover">
+              <img src="./img/corazonForma.webp" alt="Forma Corazon" class="img-thumbnail forma-img"
+                data-forma="Corazon" style="width: 5rem; height: 5rem; cursor: pointer;">
+              <figcaption class="mt-2">Corazon</figcaption>
+            </figure>
+            <figure class="d-flex flex-column align-items-center figura-hover">
+              <img src="./img/cuadradoForma.webp" alt="Forma Cuadrado" class="img-thumbnail forma-img"
+                data-forma="Cuadrado" style="width: 5rem; height: 5rem; cursor: pointer;">
+              <figcaption class="mt-2">Cuadrado</figcaption>
+            </figure>
+            <figure class="d-flex flex-column align-items-center figura-hover">
+              <img src="./img/ovaladoForma.webp" alt="Forma Ovalado" class="img-thumbnail forma-img"
+                data-forma="Ovalado" style="width: 5rem; height: 5rem; cursor: pointer;">
+              <figcaption class="mt-2">Ovalado</figcaption>
+            </figure>
+            <figure class="d-flex flex-column align-items-center figura-hover">
+              <img src="./img/marquesaForma.webp" alt="Forma Marquesa" class="img-thumbnail forma-img"
+                data-forma="Marquesa" style="width: 5rem; height: 5rem; cursor: pointer;">
+              <figcaption class="mt-2">Marquesa</figcaption>
+            </figure>
+            <figure class="d-flex flex-column align-items-center figura-hover">
+              <img src="./img/radianteForma.webp" alt="Forma Radiante" class="img-thumbnail forma-img"
+                data-forma="Radiante" style="width: 5rem; height: 5rem; cursor: pointer;">
+              <figcaption class="mt-2">Radiante</figcaption>
+            </figure>
+            <figure class="d-flex flex-column align-items-center figura-hover">
+              <img src="./img/peraForma.webp" alt="Forma Pera" class="img-thumbnail forma-img" data-forma="Pera"
+                style="width: 5rem; height: 5rem; cursor: pointer;">
+              <figcaption class="mt-2">Pera</figcaption>
+            </figure>
+          </section>
+        </fieldset>
+
+        <!-- Quilates -->
+        <fieldset class="slider-wrapper">
+          <legend class="form-label">Quilates</legend>
+          <div id="quilates-slider" class="custom-slider"></div>
+          <legend class="slider-labels mt-2">
+            <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+          </legend>
+          <div class="d-flex justify-content-between align-items-center gap-2 mt-2">
+            <label>Mín:
+              <input type="number" step="0.01" min="0" max="10" id="min-quilates" class="form-control form-control-sm"
+                style="width: 100px;" />
+            </label>
+            <label>Máx:
+              <input type="number" step="0.01" min="0" max="10" id="max-quilates" class="form-control form-control-sm"
+                style="width: 100px;" />
+            </label>
+          </div>
+        </fieldset>
+      </section>
+
+      <!-- Columna Derecha -->
+      <section class="col-lg-6 p-4">
+        <!-- Corte -->
+        <fieldset class="slider-wrapper mb-3">
+          <legend class="form-label">Corte</legend>
+          <div id="corte-slider" class="custom-slider"></div>
+          <div class="slider-labels">
+            <span>Excelente</span><span>Muy Bueno</span><span>Bueno</span><span>Aceptable</span><span>Deficiente</span>
+          </div>
+        </fieldset>
+
+        <!-- Color -->
+        <fieldset class="slider-wrapper mb-3">
+          <legend class="form-label">Color</legend>
+          <div id="color-slider" class="custom-slider"></div>
+          <div class="slider-labels">
+            <span>D</span><span>E</span><span>F</span><span>G</span><span>H</span><span>I</span><span>J</span>
+          </div>
+        </fieldset>
+
+        <!-- Claridad -->
+        <fieldset class="slider-wrapper mb-3">
+          <legend class="form-label">Claridad</legend>
+          <div id="claridad-slider" class="custom-slider"></div>
+          <div class="slider-labels">
+            <span>FL</span><span>IF</span><span>VVS1</span><span>VVS2</span><span>VS1</span><span>SI1</span><span>SI2</span>
+          </div>
+        </fieldset>
+
+        <!-- Fluorescencia -->
+        <fieldset class="slider-wrapper mb-3">
+          <legend class="form-label">Fluorescencia</legend>
+          <div id="fluorescencia-slider" class="custom-slider"></div>
+          <div class="slider-labels">
+            <span>Muy fuerte</span><span>Fuerte</span><span>Media</span><span>Tenue</span><span>Nada</span>
+          </div>
+        </fieldset>
+
+        <!-- Certificado -->
+        <fieldset class="mb-4">
+          <legend class="form-label">Certificado</legend>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gia" value="GIA" />
+            <label class="form-check-label" for="gia">GIA</label>
+          </div>
+        </fieldset>
+      </section>
+
+      <!-- Botón Final -->
+      <div class="d-flex justify-content-end mb-3 col-12 px-4">
+        <a href="./quotation.html" class="btn btn-secondary">Regresar</a>
+        <button type="button" class="btn btn-primary ms-3 boton-cotizar">Cotizar</button>
       </div>
-    </fieldset>
+    </form>
+  </main>
 
-    <!-- Claridad -->
-    <fieldset class="slider-wrapper">
-      <legend class="form-label">Claridad</legend>
-      <div id="claridad-slider" class="custom-slider"></div>
-      <div class="slider-labels">
-        <span>FL</span><span>IF</span><span>VVS1</span><span>VVS2</span><span>VS1</span><span>SI1</span><span>SI2</span>
-      </div>
-    </fieldset>
+  <!-- Modal Cotizar -->
+<div class="modal fade" id="cotizarModal" tabindex="-1" aria-labelledby="cotizarModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
 
-    <!-- Fluorescencia -->
-    <fieldset class="slider-wrapper">
-      <legend class="form-label">Fluorescencia</legend>
-      <div id="fluorescencia-slider" class="custom-slider"></div>
-      <div class="slider-labels">
-        <span>Muy fuerte</span><span>Fuerte</span><span>Media</span><span>Tenue</span><span>Nada</span>
-      </div>
-    </fieldset>
-
-    <!-- Certificado -->
-
-    <fieldset class="mb-4">
-      <legend class="form-label">Certificado</legend>
-      <div class="form-check">
-        <input class="form-check-input custum-checkbox" type="checkbox" name="certificado" id="gia" value="GIA">
-        <label class="form-check-label" for="gia">GIA</label>
-      </div>
-    </fieldset>
-
-    </section>
-
-    <section class="d-flex justify-content-end mb-3">
-    <a class="btn text-white col-xs-6 col-sm-7 col-lg-4 boton-home" href="./cotizador.html" role="button">
-    Regresar a la selección de tu piedra preciosa
-    </a>
-    </section>
-
-
-    <!-- Botón Cotizar -->
-    <section class="text-center p-4">
-      <button type="button" class="btn btn-lg col-6 boton-cotizar"  data-bs-toggle="modal" data-bs-target="#cotizarModal">Cotizar</button>
-    </section>
-
-  </form>
-</main>
-
-<!-- Modal Cotizar -->
-<section class="modal fade" id="cotizarModal" tabindex="-1" aria-labelledby="cotizarModalLabel" aria-hidden="true">
-  <section class="modal-dialog modal-dialog-centered">
-    <article class="modal-content">
-      
       <header class="position-relative">
         <h3 class="modal-title w-100 text-center p-3" id="cotizarModalLabel">Precio Estimado</h3>
-        <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"
+          aria-label="Cerrar"></button>
       </header>
 
-      <fieldset class="modal-body text-center">
-        <div class="fs-4 mb-3">$250 000 MXN</div>
-        <a class="btn col-6 boton-cita mb-3" href="./cotizador.html" role="button">Generar Cita</a>
+      <div class="modal-body text-center">
+        <div id="precioEstimado" class="fs-4 mb-3">$250 000 MXN</div>
+        <a class="btn col-6 boton-cita mb-3" href="../bookAppointment/bookAppointment.html" role="button">Generar Cita</a>
         <p class="text-muted">Precio estimado, sujeto a cambios según disponibilidad y materiales</p>
-      </fieldset>
+      </div>
 
-    </article>
-  </section>
-</section>
+    </div>
+  </div>
+</div>
 
-<footer class="footer-contacto">
 
-        <div class="container">
-          <div class="row text-center text-md-start">
-            <div class="col-12 col-md-4 mb-4 mb-md-0">
-              <h5 class="mb-2 text-center text-md-start">Nuestras redes sociales</h5>
-              <div class="d-flex justify-content-between justify-content-md-start gap-3 mx-4 social-icons ">
-                <a href="#" ><i class="bi bi-tiktok fs-4"></i></a>
-                <a href="#" ><i class="bi bi-whatsapp fs-4"></i></a>
-                <a href="#"     ><i class="bi bi-instagram fs-4"></i></a>
-              </div>
-              <p class="text-center text-md-start">Conéctate con nosotros para no perderte ninguna novedad.</p>
-            </div>
-      
-            <!-- Sección 2: Enlaces Útiles -->
-            <div class="col-12 col-md-4 mb-4 mb-md-0">
-              <h5>Enlaces Útiles</h5>
-              <ul class="list-unstyled">
-                <li><a href="#" class="text-decoration-none">Inicio</a></li>
-                <li><a href="../src/documents/DocumentoLegal.pdf" class="text-decoration-none">Terminos y condiciones</a></li>
-                <li><a href="../src/documents/DocumentoLegal.pdf" class="text-decoration-none">Avisos legales</a></li>
-                <li><a href="#" class="text-decoration-none">Mision, Vision y Valores</a></li>
-              </ul>
-            </div>
-      
-            <!-- Sección 3: Contacto -->
-            <div class="col-12 col-md-4">
-              <h5>Contacto</h5>
-              <p class="mb-1">Email: info@ejemplo.com</p>
-              <p class="mb-1">Tel: (52) 456-7890</p>
-              <p class="mb-0">Dirección: Calle Ficticia 123, Guadalajara</p>
-            </div>
+  <footer class="footer-contacto">
+
+    <div class="container">
+      <div class="row text-center text-md-start">
+        <div class="col-12 col-md-4 mb-4 mb-md-0">
+          <h5 class="mb-2 text-center text-md-start">Nuestras redes sociales</h5>
+          <div class="d-flex justify-content-between justify-content-md-start gap-3 mx-4 social-icons ">
+            <a href="#"><i class="bi bi-tiktok fs-4"></i></a>
+            <a href="#"><i class="bi bi-whatsapp fs-4"></i></a>
+            <a href="#"><i class="bi bi-instagram fs-4"></i></a>
           </div>
-      
-          <hr class="bg-light">
-      
-          <div class="text-center">
-            <p class="mb-0">© 2025 Aurum Designers. Todos los derechos reservados.</p>
-
-
-            <p>© 2025 Development by <a href="../aboutUs/aboutUs.html" id="link-sprintasticos">Sprintásticos.</a> Todos los derechos
-                reservados.</p>
-
+          <p class="text-center text-md-start">Conéctate con nosotros para no perderte ninguna novedad.</p>
         </div>
-    </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/nouislider@15.7.0/dist/nouislider.min.js"></script>
-<script src="./formularioDiamante.js"></script>
+        <!-- Sección 2: Enlaces Útiles -->
+        <div class="col-12 col-md-4 mb-4 mb-md-0">
+          <h5>Enlaces Útiles</h5>
+          <ul class="list-unstyled">
+            <li><a href="../../../index.html" class="text-decoration-none">Inicio</a></li>
+            <li><a href="../src/documents/DocumentoLegal.pdf" class="text-decoration-none">Terminos y condiciones</a>
+            </li>
+            <li><a href="../src/documents/DocumentoLegal.pdf" class="text-decoration-none">Avisos legales</a></li>
+            <li><a href="#" class="text-decoration-none">Mision, Vision y Valores</a></li>
+          </ul>
+        </div>
+
+        <!-- Sección 3: Contacto -->
+        <div class="col-12 col-md-4">
+          <h5>Contacto</h5>
+          <p class="mb-1">Email: info@ejemplo.com</p>
+          <p class="mb-1">Tel: (52) 456-7890</p>
+          <p class="mb-0">Dirección: Calle Ficticia 123, Guadalajara</p>
+        </div>
+      </div>
+
+      <hr class="bg-light">
+
+      <div class="text-center">
+        <p class="mb-0">© 2025 Aurum Designers. Todos los derechos reservados.</p>
+
+
+        <p>© 2025 Development by <a href="../team/team.html" id="link-sprintasticos">Sprintásticos.</a> Todos los
+          derechos
+          reservados.</p>
+
+      </div>
+  </footer>
+
+
 </body>
+
 </html>
