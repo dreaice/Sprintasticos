@@ -10,3 +10,8 @@
     transform: scale(1.02); 
     cursor: pointer;
   }
+
+  .boton-enviar:active {
+    transform: scale(0.98);
+    background-color: var(--color-primario);
+  }
