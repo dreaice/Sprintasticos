@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles-catalogo.css">
+    <link rel="stylesheet" href="../../styles/styles.css">
+</head>
+
+<body>
+    <header class="border-bottom">
+
+        <nav class="navbar navbar-expand-lg navbar-custom px-4 container-fluid">
+            <a class="navbar-brand" href="#">
+
+                <img class="img-fluid" src="./src/img/logo.png" alt="Logo AD" style="max-height: 60px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+
+                <ul class="navbar-nav mx-auto gap-lg">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../aboutUsJewelry/aboutUsJewelry.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../catalogo/catalogo.html">Catálogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Nuestro Trabajo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../quotation/quotation.html">Cotizador</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../contactUs/contactUs.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../administrador/index.html">Administrador</a></li>
+                </ul>
+
+                <div class="d-flex align-items-center gap-2">
+                    <a href="#" class="btn btn-agenda">Agenda tu Cita</a>
+                    <a href="#" class="btn btn-login">Login</a>
+                    <a href="#" class="ms-2 cart-icon"><i class="bi bi-cart"></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Pulsera -->
+    <section class="pulsera-contenedor">
+        <button class="flecha-izquierda" id="btn-izquierda" aria-label="Anterior"></button>
+
+        <div class="pulsera-ventana">
+            <section class="pulsera" id="pulsera">
+              
+                <!-- Piezas -->
+                <article class="pieza">
+                    <div class="circulo-grande">
+                        <img src="./img/Climbers1.png" class="imagen-circular" />
+                    </div>
+                    <p>Climbers</p>
+                </article>
+
+                <article class="pieza">
+                    <div class="circulo-grande">
+                        <img src="./img/Aracadas (1).png" class="imagen-circular" />
+                    </div>
+                    <p>Arracadas</p>
+                </article>
+
+                <article class="pieza">
+                    <div class="circulo-grande">
+                        <img src="./img/churumbelas.jpg" />
+                    </div>
+                    <p>Churumbelas</p>
+                </article>
+
+                <article class="pieza">
+                    <div class="circulo-grande">
+                        <img src="./img/broqueles.jpg" />
+                    </div>
+                    <p>Broqueles</p>
+                </article>
+
+                <article class="pieza">
+                    <div class="circulo-grande">
+                        <img src="./img/tennis.jpg" />
+                    </div>
+                    <p>Tennis Bracelets</p>
+                </article>
+
+                <article class="pieza">
+                    <div class="circulo-grande">
+                        <img src="./img/tennis.jpg" />
+                    </div>
+                    <p>Tennis</p>
+                </article>
+
+                <article class="pieza">
+                    <div class="circulo-grande">
+                        <img src="./img/tennis.jpg" />
+                    </div>
+                    <p>Bracelets</p>
+                </article>
+            </section>
+        </div>
+
+        <button class="flecha-derecha" id="btn-derecha" aria-label="Siguiente"></button>
+    </section>
+
+    <!-- Filtro -->
+    <button class="btn-filtro">FILTRO</button>
+
+    <!-- Productos -->
+    <section class="grid-productos">
+        <article class="producto" data-variante="amatista">
+            <img src="./img/amatista.png" alt="Amatista">
+            <button class="btn-conoce-mas">Conoce más</button>
+        </article>
+        <article class="producto" data-variante="amatista">
+            <img src="./img/amatista.png" alt="Amatista">
+            <button class="btn-conoce-mas">Conoce más</button>
+        </article>
+        <article class="producto" data-variante="amatista">
+            <img src="./img/dolcevita.png" alt="Dolce Vita" />
+            <button class="btn-conoce-mas">Conoce más</button>
+        </article>
+        <article class="producto">
+            <img src="./img/broqueleszafirorosa.png" alt="Broqueles Zafiro Rosa" />
+            <button class="btn-conoce-mas">Conoce más</button>
+        </article>
+        <article class="producto">
+            <img src="./img/amatista.png" alt="Amatista" />
+            <button class="btn-conoce-mas">Conoce más</button>
+        </article>
+        <article class="producto">
+            <img src="./img/morganita.png" alt="Morganita" />
+            <button class="btn-conoce-mas">Conoce más</button>
+        </article>
+        <article class="producto">
+            <img src="./img/Aracadas (1).png" alt="Arracadas" />
+            <button class="btn-conoce-mas">Conoce más</button>
+        </article>
+        <article class="producto">
+            <img src="./img/Aracadas (1).png" alt="Arracadas" />
+            <button class="btn-conoce-mas">Conoce más</button>
+        </article>
+        <article class="producto">
+            <img src="./img/Aracadas.png" alt="Arracadas" />
+            <button class="btn-conoce-mas">Conoce más</button>
+        </article>
+        <article class="producto">
+            <img src="./img/amatista.png" alt="Amatista" />
+            <button class="btn-conoce-mas">Conoce más</button>
+        </article>
+        <article class="producto">
+            <img src="./img/Aracadas (1).png" alt="Arracadas" />
+            <button class="btn-conoce-mas">Conoce más</button>
+        </article>
+    </section>
+
+    <script src="./catalogo.js"></script>
+</body>
+
+</html>
