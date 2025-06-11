@@ -1,15 +1,16 @@
-/*
+
 // Lógica para redirigir al detalle con parámetro
 document.querySelectorAll('.producto').forEach(producto => {
   const boton = producto.querySelector('.btn-conoce-mas');
   const imagen = producto.querySelector('img');
-  const nombreArchivo = imagen.src.split('/').pop().split('.')[0];
+ const nombreArchivo = producto.dataset.variante;
 
   boton.addEventListener('click', () => {
-    window.location.href = detalles.html?variante=${encodeURIComponent(nombreArchivo)};
+    console.log("Variante recibida:", nombreArchivo); // 🔍
+window.location.href = `producto.html?variante=${encodeURIComponent(nombreArchivo)}`;
   });
 });
-*/
+
 // Mostrar producto en detalles.html
 const params = new URLSearchParams(window.location.search);
 let variante = params.get('variante')?.toLowerCase();
@@ -26,8 +27,8 @@ const productos = {
     vistasPrevias: ["./img/anilloAmatista.jpeg", "./img/anilloAmatista.jpeg", "./img/anilloAmatista.jpeg"],
     precio: "$15,000.00 MXN",
     disponibilidad: "Disponible",
-    id: "001",
-    ot: "002"
+    id: "0014",
+    ot: "0024"
   },
   morganita: {
     nombre: "Anillo abrazo turmalina",
@@ -35,8 +36,8 @@ const productos = {
     vistasPrevias: ["./img/anilloTurmalina.jpeg", "./img/anilloTurmalina.jpeg", "./img/anilloTurmalina.jpeg"],
     precio: "$17,500.00 MXN",
     disponibilidad: "Disponible",
-    id: "002",
-    ot: "003"
+    id: "0024",
+    ot: "0034"
   },
   zafiro: {
     nombre: "Anillo abrazo zafiro rosa",
@@ -44,8 +45,8 @@ const productos = {
     vistasPrevias: ["./img/anilloZafiro.jpeg", "./img/anilloZafiro.jpeg", "./img/anilloZafiro.jpeg"],
     precio: "$19,000.00 MXN",
     disponibilidad: "Disponible",
-    id: "003",
-    ot: "004"
+    id: "0034",
+    ot: "0044"
   }
 };
 
