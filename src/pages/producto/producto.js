@@ -23,6 +23,15 @@ const productos = {
     disponibilidad: "En stock",
     id: "001",
     ot: "002"
+  },
+    churumbela: {
+    nombre: "AMATISTA",
+    imagenPrincipal: "../catalogo/img/amatista.png",
+    vistasPrevias: ["../catalogo/img/amatista.png", "../catalogo/img/amatista.png", "../catalogo/img/amatista.png"],
+    precio: "$2900",
+    disponibilidad: "En stock",
+    id: "002",
+    ot: "002"
   }
     
 };
