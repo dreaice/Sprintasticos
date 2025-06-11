@@ -109,8 +109,29 @@
         <button class="flecha-derecha" id="btn-derecha" aria-label="Siguiente"></button>
     </section>
 
-    <!-- Filtro -->
-    <button class="btn-filtro">FILTRO</button>
+
+  <!-- Botón que abre el filtro -->
+  <button id="btnAbrirFiltro" class="btn btn-outline-secondary btn-filtro">
+    <i class="bi bi-sliders"></i> Filtro
+  </button>
+
+  <!-- Panel de filtro oculto -->
+  <aside id="filtroPanel" aria-hidden="true">
+    <header>
+      <button id="btnCerrarFiltro" class="cerrar-filtro" aria-label="Cerrar filtro">&times;</button>
+      <h5>Filtrar Productos</h5>
+    </header>
+    <section>
+      <label for="kilates">Kilates:</label>
+      <input type="range" id="kilates" min="10" max="100" value="50"/>
+      <div><small>10 - 100</small></div>
+
+      <label for="precio" class="mt-3">Precio:</label>
+      <input type="range" id="precio" min="1000" max="100000" value="50000"/>
+      <div><small>$1000 - $100,000</small></div>
+    </section>
+  </aside>
+
 
     <!-- Productos -->
     <section class="grid-productos">

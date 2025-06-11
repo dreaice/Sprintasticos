@@ -26,3 +26,18 @@ document.querySelectorAll('.producto').forEach(producto => {
     window.location.href = `../producto/producto.html?variante=${encodeURIComponent(nombreArchivo)}`;
   });
 });
+
+// Lógica para el filtro
+const btnAbrir = document.getElementById('btnAbrirFiltro');
+const btnCerrar = document.getElementById('btnCerrarFiltro');
+const panel = document.getElementById('filtroPanel');
+
+btnAbrir.addEventListener('click', () => {
+  panel.classList.add('activo');
+  panel.setAttribute('aria-hidden', 'false');
+});
+
+btnCerrar.addEventListener('click', () => {
+  panel.classList.remove('activo');
+  panel.setAttribute('aria-hidden', 'true');
+});

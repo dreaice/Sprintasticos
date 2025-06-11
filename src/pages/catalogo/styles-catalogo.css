@@ -1,4 +1,5 @@
 body {
+   overflow-x: hidden;
   background: #FFFFF0 !important;
 }
 /*carrusel menu*/
@@ -238,61 +239,6 @@ body {
   font-size: 0.9rem;
 }
 
-/* Selector de piedra preciosa */
-
-.selector-piedra {
-  margin: 1.5rem 0;
-}
-
-.selector-piedra h3 {
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-  color: #333;
-}
-
-.piedra-contenedor {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.btn-activo-piedra {
-  border: none;
-  background: none;
-  cursor: pointer;
-  padding: 0.5rem;
-  text-align: center;
-}
-
-.btn-activo-piedra .piedra-img {
-  border-color: aqua;
-  box-shadow: 0 0 0 2px rgba(106, 13, 173, 0.3);
-}
-
-.piedra-img {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  border: 2px solid #eee;
-  transition: all 0.3s ease;
-}
-
-.piedra-nombre {
-  display: block;
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
-  color: #555;
-}
-
-.btn-piedra {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.5rem;
-  text-align: center;
-}
-
-/* MEDIA QUERIES - RESPONSIVE */
 
 @media (max-width: 768px) {
   .grid-productos {
@@ -318,7 +264,44 @@ body {
     max-height: 300px;
   }
 
-  .btn-filtro {
-    margin-top: 1rem;
-  }
+}
+/* Botón de filtro */
+.btn-filtro {
+position: fixed;
+  top: 160px; 
+  right: 10px;
+  z-index: 999;
+  background-color: #FFFFF0;
+  border: #FFFFF0;
+  border-radius: 10px;
+  padding: 10px 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Panel lateral oculto por defecto */
+aside#filtroPanel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+/* Panel visible */
+aside#filtroPanel.activo {
+  transform: translateX(0);
+}
+
+/* Botón cerrar */
+.cerrar-filtro {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  float: right;
 }
