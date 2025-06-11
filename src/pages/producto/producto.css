@@ -1,0 +1,136 @@
+.producto-contenedor{
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.imagenes-producto{
+    padding: 1rem;
+}
+
+.imagen-principal{
+    width: 400px;
+    max-height: 500px;
+    object-fit: contain;
+}
+
+
+
+/*
+.vistaprevia-contenedor{
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    justify-content: center;
+}
+
+.vistaprevia{
+    width: 60px;
+    height: 60px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.vistaprevia-activa{
+    border-color: #6a0dad;
+}
+
+.vistaprevia...
+*/
+
+/*Sección información del producto*/
+.info-producto{
+    padding: 1.5rem;
+}
+
+
+
+.info-producto h1 {
+    font-weight: 400;
+    margin-bottom: 0.75rem;
+    font-size: 1.8rem;
+}
+.producto-codigos{
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+
+
+.precio{
+  font-size: 1.7rem;
+  font-weight: 500;
+  margin: 0.8rem 0;
+  letter-spacing: 0.2px;
+}
+
+.disponibilidad{
+    padding: 0.3rem;
+    display: inline-block;
+    font-size: 0.9rem;
+}
+
+
+/* Sección elige tu piedra preciosa*/
+.selector-piedra {
+    margin: 1.5rem 0;
+}
+
+.selector-piedra h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #333; 
+}
+
+.piedra-contenedor {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-activo-piedra{
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+
+.btn-activo-piedra .piedra-img {
+    border-color: aqua;
+    box-shadow: 0 0 0 2px rgba(106, 13,173, 0.3);
+}
+
+.piedra-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid #eee;
+    transition: all 0.3s ease;
+
+}
+
+.piedra-nombre {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.btn-piedra {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+
+
+
+
