@@ -1,136 +1,383 @@
-.producto-contenedor{
+body {
+    font-family: var(--fuente-cuerpo);
+    background-color: var(--color-fondo) !important;
+    color: var(--color-texto);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+/* Sobreescribir estilos de Bootstrap */
+.container-fluid,
+main,
+section {
+    background: transparent !important;
+}
+
+main.producto-contenedor {
+    flex: 1;
+    background: transparent;
+}
+
+.producto-contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: transparent;
 }
 
-.imagenes-producto{
-    padding: 1rem;
+@media (max-width: 768px) {
+    .producto-contenedor {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .info-producto h1 {
+        font-size: 2rem;
+    }
+
+    .precio {
+        font-size: 1.8rem;
+    }
 }
 
-.imagen-principal{
-    width: 400px;
-    max-height: 500px;
-    object-fit: contain;
-}
-
-
-
-/*
-.vistaprevia-contenedor{
+.imagenes-producto {
     display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
-.vistaprevia{
-    width: 60px;
-    height: 60px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    cursor: pointer;
+.imagen-principal {
+    width: 100%;
+    max-width: 450px;
+    height: 400px;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
 }
 
-.vistaprevia-activa{
-    border-color: #6a0dad;
+.imagen-principal img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
-.vistaprevia...
-*/
+.vistaprevia-contenedor {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.vistaprevia {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #740354;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.vistaprevia:hover {
+    border-color: var(--color-primario);
+    border-width: 3px;
+    box-shadow: 0 4px 15px rgba(116, 3, 84, 0.2);
+}
+
+.vistaprevia.activa {
+    border-color: var(--color-primario);
+    border-width: 3px;
+    box-shadow: 0 0 10px rgba(116, 3, 84, 0.3);
+}
+
+.vistaprevia img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 /*Sección información del producto*/
-.info-producto{
-    padding: 1.5rem;
+.info-producto {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-
-
 
 .info-producto h1 {
-    font-weight: 400;
-    margin-bottom: 0.75rem;
-    font-size: 1.8rem;
+    font-family: var(--fuente-titulos);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    color: var(--color-primario);
+    line-height: 1.2;
 }
-.producto-codigos{
+
+.producto-codigos {
     color: #666;
     font-size: 0.9rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    gap: 1rem;
 }
 
-
-
-.precio{
-  font-size: 1.7rem;
-  font-weight: 500;
-  margin: 0.8rem 0;
-  letter-spacing: 0.2px;
+.identificador {
+    background: #f5f5f5;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    font-weight: 500;
 }
 
-.disponibilidad{
-    padding: 0.3rem;
+.precio {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    color: var(--color-primario);
+    letter-spacing: 0.2px;
+}
+
+.disponibilidad {
+    padding: 0.5rem 1rem;
     display: inline-block;
     font-size: 0.9rem;
+    background: #e8f5e8;
+    color: #2e7d32;
+    border-radius: 20px;
+    font-weight: 500;
+    margin-bottom: 2rem;
 }
 
+/* Separador */
+.separador {
+    height: 1px;
+    background: #eee;
+    margin: 2rem 0;
+    grid-column: 1 / -1;
+}
 
 /* Sección elige tu piedra preciosa*/
 .selector-piedra {
-    margin: 1.5rem 0;
+    margin: 0;
+    grid-column: 1 / -1;
 }
 
 .selector-piedra h3 {
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-    color: #333; 
-}
-
-.piedra-contenedor {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-.btn-activo-piedra{
-    border: none;
-    background: none;
-    cursor: pointer;
-    padding: 0.5rem;
+    font-family: var(--fuente-titulos);
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-primario);
+    font-weight: 600;
     text-align: center;
 }
 
-
-.btn-activo-piedra .piedra-img {
-    border-color: aqua;
-    box-shadow: 0 0 0 2px rgba(106, 13,173, 0.3);
-}
-
-.piedra-img {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    border: 2px solid #eee;
-    transition: all 0.3s ease;
-
-}
-
-.piedra-nombre {
-    display: block;
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
-    color: #555;
+.piedra-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .btn-piedra {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 0.5rem;
+    padding: 1rem;
     text-align: center;
+    transition: transform 0.3s ease;
 }
 
+.btn-piedra:hover {
+    transform: translateY(-2px);
+}
 
+.btn-piedra img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #eee;
+    transition: all 0.3s ease;
+    object-fit: cover;
+}
 
+.btn-piedra:hover img,
+.btn-piedra.activo img {
+    border-color: var(--color-primario);
+    box-shadow: 0 0 0 3px rgba(116, 3, 84, 0.2);
+}
 
+.btn-piedra.activo .piedra-nombre {
+    color: var(--color-primario);
+    font-weight: 600;
+}
+
+.piedra-nombre {
+    display: block;
+    margin-top: 0.8rem;
+    font-size: 1rem;
+    color: var(--color-primario);
+    font-weight: 500;
+    font-family: var(--fuente-cuerpo);
+}
+
+/* Botones principales */
+.btn-agrega-carrito,
+.btn-compra {
+    width: 100%;
+    height: 60px;
+    padding: 0 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0.5rem 0;
+    grid-column: 1 / -1;
+    display: block;
+}
+
+.btn-agrega-carrito {
+    background: var(--color-terciario);
+    color: white;
+}
+
+.btn-agrega-carrito:hover {
+    background: var(--color-secundario);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(189, 88, 119, 0.3);
+}
+
+.btn-compra {
+    background: var(--color-primario);
+    color: white;
+}
+
+.btn-compra:hover {
+    background: var(--color-primario);
+    filter: brightness(0.9);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(116, 3, 84, 0.3);
+}
+
+/* Estilos para el carrito lateral */
+.carrito-lateral {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 350px;
+    height: 100vh;
+    background: #BD5877;
+    box-shadow: -2px 0 10px rgba(247, 247, 247, 0.1);
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    display: block !important;
+}
+
+.carrito-lateral.mostrar {
+    transform: translateX(0);
+}
+
+.carrito-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #FDCBC9;
+}
+
+.carrito-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.cerrar-carrito {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+}
+
+.carrito-contenido {
+    padding: 1rem;
+}
+
+.carrito-item {
+    display: none;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background: white;
+    margin-bottom: 1rem;
+}
+
+.carrito-item.mostrar {
+    display: flex;
+}
+
+.carrito-item-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.carrito-item-info {
+    flex: 1;
+}
+
+.carrito-item-nombre {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.carrito-item-precio {
+    margin: 0 0 1rem 0;
+    font-weight: 600;
+    color: #740354;
+}
+
+.carrito-cantidad {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-cantidad {
+    background: #740354;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-cantidad:hover {
+    background: #F4B5B8;
+}
+
+.cantidad-numero {
+    font-weight: 600;
+    min-width: 20px;
+    text-align: center;
+}
 

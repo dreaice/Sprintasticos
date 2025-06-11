@@ -1,13 +1,52 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="producto.css" />
+  <link rel="stylesheet" href="../../styles/styles.css" />
+  <!-- Bootstrap y estilos -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
   <title>Detalle del Producto</title>
 </head>
 
 <body>
+
+  <header class="border-bottom">
+
+    <nav class="navbar navbar-expand-lg navbar-custom px-4 container-fluid">
+      <a class="navbar-brand" href="#">
+
+        <img class="img-fluid" src="../home/home-imagenes/logo.png" alt="Logo AD" style="max-height: 60px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+
+        <ul class="navbar-nav mx-auto gap-lg">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="../aboutUsJewelry/aboutUsJewelry.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="../catalogo/catalogo.html">Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Nuestro Trabajo</a></li>
+          <li class="nav-item"><a class="nav-link" href="../quotation/quotation.html">Cotizador</a></li>
+          <li class="nav-item"><a class="nav-link" href="../contactUs/contactUs.html">Contacto</a></li>
+
+        </ul>
+
+        <div class="d-flex align-items-center gap-2">
+          <a href="#" class="btn btn-agenda">Agenda tu Cita</a>
+          <a href="#" class="btn btn-login">Login</a>
+          <a href="#" class="ms-2 cart-icon"><i class="bi bi-cart"></i></a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
   <main class="producto-contenedor">
     <section class="imagenes-producto">
       <div class="imagen-principal">
@@ -37,10 +76,17 @@
       <div class="piedra-container">
         <!-- Opciones de piedra -->
         <button class="btn-piedra" data-variante="amatista">
-          <img src="../catalogo/img/amatista.png" alt="Amatista"  />
+          <img src="./img/PiedraAmatista.jpeg" alt="Amatista" />
           <span class="piedra-nombre">Amatista</span>
         </button>
-        <!-- Agrega más variantes -->
+        <button class="btn-piedra" data-variante="morganita">
+          <img src="./img/piedraTurmalina.jpeg" alt="Morganita" />
+          <span class="piedra-nombre">Turmalina</span>
+        </button>
+        <button class="btn-piedra" data-variante="zafiro">
+          <img src="./img/piedraZafiro.jpeg" alt="Zafiro Rosa" />
+          <span class="piedra-nombre">Zafiro Rosa</span>
+        </button>
       </div>
     </div>
 
@@ -50,6 +96,74 @@
     <button class="btn-compra">Compra</button>
   </main>
 
+  <!-- Sección del carrito que aparece cuando se agrega un producto -->
+  <div class="carrito-lateral" id="carritoLateral">
+    <div class="carrito-header">
+      <h3>Carrito de Compras</h3>
+      <button class="cerrar-carrito" id="cerrarCarrito">×</button>
+    </div>
+    <div class="carrito-contenido">
+      <div class="carrito-item" id="carritoItem">
+        <img class="carrito-item-img" id="carritoItemImg" src="" alt="Producto">
+        <div class="carrito-item-info">
+          <h4 class="carrito-item-nombre" id="carritoItemNombre"></h4>
+          <p class="carrito-item-precio" id="carritoItemPrecio"></p>
+          <div class="carrito-cantidad">
+            <button class="btn-cantidad" id="btnRestarCarrito">-</button>
+            <span class="cantidad-numero" id="cantidadNumero">1</span>
+            <button class="btn-cantidad" id="btnSumarCarrito">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER ESTÁNDAR -->
+  <footer class="footer-contacto mt-5">
+    <div class="container">
+      <div class="row text-center text-md-start">
+        <div class="col-12 col-md-4 mb-4 mb-md-0">
+          <h5 class="mb-2 text-center text-md-start">Nuestras redes sociales</h5>
+          <div class="d-flex justify-content-between justify-content-md-start gap-3 mx-4 social-icons ">
+            <a href="#"><i class="bi bi-tiktok fs-4"></i></a>
+            <a href="#"><i class="bi bi-whatsapp fs-4"></i></a>
+            <a href="#"><i class="bi bi-instagram fs-4"></i></a>
+          </div>
+          <p class="text-center text-md-start">Conéctate con nosotros para no perderte ninguna novedad.</p>
+        </div>
+
+        <div class="col-12 col-md-4 mb-4 mb-md-0">
+          <h5>Enlaces Útiles</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-decoration-none">Inicio</a></li>
+            <li><a href="../../documents/DocumentoLegal.pdf" class="text-decoration-none">Términos y condiciones</a>
+            </li>
+            <li><a href="../../documents/DocumentoLegal.pdf" class="text-decoration-none">Avisos legales</a></li>
+            <li><a href="#" class="text-decoration-none">Misión, Visión y Valores</a></li>
+          </ul>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <h5>Contacto</h5>
+          <p class="mb-1">Email: info@ejemplo.com</p>
+          <p class="mb-1">Tel: (52) 456-7890</p>
+          <p class="mb-0">Dirección: Calle Ficticia 123, Guadalajara</p>
+        </div>
+      </div>
+
+      <hr class="bg-light">
+
+      <div class="text-center">
+        <p class="mb-0">© 2025 Aurum Designers. Todos los derechos reservados.</p>
+        <p>© 2025 Development by <a href="../team/team.html" id="link-sprintasticos">Sprintásticos.</a> Todos los
+          derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="producto.js"></script>
 </body>
+
 </html>
