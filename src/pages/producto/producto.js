@@ -17,12 +17,12 @@ const variante = params.get('variante')?.toLowerCase();
 const productos = {
   amatista: {
     nombre: "AMATISTA",
-    imagenPrincipal: "",
-    vistasPrevias: ["amatista.png", "amatista.png", "amatista.png"],
-    precio: "$1200",
+    imagenPrincipal: "../catalogo/img/amatista.png",
+    vistasPrevias: ["../catalogo/img/amatista.png", "../catalogo/img/amatista.png", "../catalogo/img/amatista.png"],
+    precio: "$2900",
     disponibilidad: "En stock",
-    id: "1234",
-    ot: "5678"
+    id: "001",
+    ot: "002"
   }
     
 };
@@ -39,6 +39,6 @@ if (productos[variante]) {
   document.querySelectorAll(".vistaprevia img").forEach((img, index) => {
     img.src = p.vistasPrevias[index] || "img/default.png";
   });
-} else if (window.location.pathname.includes("producto.html")) {
+} else if (window.location.pathname.includes("../producto/producto.html")) {
   alert("Producto no encontrado");
 }
