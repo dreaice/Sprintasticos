@@ -23,6 +23,6 @@ document.querySelectorAll('.producto').forEach(producto => {
   const nombreArchivo = imagen.src.split('/').pop().split('.')[0];
 
   boton.addEventListener('click', () => {
-    window.location.href = `detalles.html?variante=${encodeURIComponent(nombreArchivo)}`;
+    window.location.href = `producto.html?variante=${encodeURIComponent(nombreArchivo)}`;
   });
 });

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Detalle del Producto</title>
+</head>
+
+<body>
+  <main class="producto-contenedor">
+    <section class="imagenes-producto">
+      <div class="imagen-principal">
+        <img id="imagenPrincipal" src="" alt="Imagen del producto" />
+      </div>
+      <div class="vistaprevia-contenedor">
+        <div class="vistaprevia"><img src="" alt="vista previa" /></div>
+        <div class="vistaprevia"><img src="" alt="vista previa" /></div>
+        <div class="vistaprevia"><img src="" alt="vista previa" /></div>
+      </div>
+    </section>
+
+    <section class="info-producto">
+      <h1 id="nombre-producto"></h1>
+      <div class="producto-codigos">
+        <span class="identificador" id="id-producto">ID</span>
+        <span class="identificador" id="ot-producto">OT</span>
+      </div>
+      <p class="precio" id="precio-producto"></p>
+      <p class="disponibilidad" id="disponibilidad-producto"></p>
+    </section>
+
+    <div class="separador"></div>
+
+    <div class="selector-piedra">
+      <h3>Elige tu piedra preciosa</h3>
+      <div class="piedra-container">
+        <!-- Opciones de piedra -->
+        <button class="btn-piedra" data-variante="amatista">
+          <img src="amatista.png" alt="Amatista"  />
+          <span class="piedra-nombre">Amatista</span>
+        </button>
+        <!-- Agrega más variantes -->
+      </div>
+    </div>
+
+    <div class="separador"></div>
+
+    <button class="btn-agrega-carrito">Agregar al carrito</button>
+    <button class="btn-compra">Compra</button>
+  </main>
+
+  <script src="producto.js"></script>
+</body>
+</html>
