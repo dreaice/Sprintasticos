@@ -267,3 +267,59 @@ legend {
   background-color: var(--color-primario);
   border-color: var(--color-primario);
 }
+
+
+/* =================== MODAL =================== */
+
+
+.modal-dialog {
+  background-color: transparent; /* Fondo con opacidad */
+}
+
+.modal-content {
+  background-color: var(--color-claro);
+  border-radius: 10px;
+  font-family: 'Source Serif Pro', serif;
+  color: var(--color-terciario);
+  border: 1px solid var(--color-claro); /* Borde para el modal */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+.modal-header {
+  background-color: var(--color-claro);
+  color: var(--color-terciario);
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+}
+
+.modal-header .btn-close {
+  color: var(--color-terciario);
+  font-size: 1.5rem;
+}
+
+.modal-body {
+  p{
+    color: var(--color-terciario);
+    font-weight: 600;
+  };
+  padding: 2rem;
+  font-size: 1rem;
+  color: var(--color-texto);
+}
+
+.modal-footer {
+  background-color: var(--color-primario);
+  padding: 1rem;
+}
+
+.modal-footer .btn {
+  background-color: var(--color-secundario);
+  border-radius: 5px;
+  border: none;
+  font-family: 'Jost', sans-serif;
+}
+
+.modal-footer .btn:hover {
+  background-color: var(--color-primario);
+  color: var(--color-terciario);
+}
