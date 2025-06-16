@@ -1,7 +1,7 @@
 $(document).ready(function () {
   // Funcionalidad original del botón "Ver detalle"
   $(".boton-enviar").click(function () {
-    $(this).siblings(".card-text").toggleClass("text-ajustar");
+    $(this).closest('.card').find('.card-text').toggleClass('text-ajustar');
   });
 
   // CARRUSEL FUNCTIONALITY

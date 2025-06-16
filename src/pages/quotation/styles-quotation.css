@@ -1,209 +1,325 @@
-/* Fuente Principal y Secundaria */
+/* =================== TIPOGRAFÍA =================== */
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500&family=Source+Serif+Pro:wght@400;700&display=swap');
 
-/* Paleta de colores */
+/* =================== VARIABLES DE COLOR =================== */
 :root {
-    --color-primario: #740354;
-    --color-secundario: #B99FC1;
-    --color-terciario: #BD5877;
-    --color-claro: #FDCBC9;
-    --color-texto: #343434;
-    --color-fondo: #FFFBF5;
+  --color-primario: #740354;
+  --color-secundario: #B99FC1;
+  --color-terciario: #BD5877;
+  --color-claro: #FDCBC9;
+  --color-texto: #343434;
+  --color-fondo: #FFFBF5;
 }
 
-/* Hover para la seleccion de la gema */
-.gem-container {
-    position: relative;
-    display: inline-block;
-  }
+/* =================== IMÁGENES Y HOVERS =================== */
+.forma-img {
+  width: 5rem;
+  height: 5rem;
+  cursor: pointer;
+}
 
-  .gem-container img {
-    display: block;
-    width: 100%;
-    height: auto;
-    
-  }
-
-  .img-rounded {
+.img-rounded {
   border-radius: 3.125rem;
 }
-  .hover-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color:rgba(255, 255, 255, 0.9);
-    color: var(--color-texto);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    text-align: center;
-    padding: 1rem;
-  }
 
-  .gem-container:hover .hover-content {
-    opacity: 1;
-  }
+.gem-container {
+  position: relative;
+  display: inline-block;
+}
 
-  .parrafo-body{
-    font-size: clamp(1.4rem, 1.8vw, 1.6rem); ;
-  }
+.gem-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
-  .hover-content p {
-  padding: 0.5rem 0.5rem;
+.hover-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--color-texto);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  padding: 1rem;
+}
+
+.gem-container:hover .hover-content {
+  opacity: 1;
+}
+
+.hover-content h6 {
+  font-size: clamp(1.7rem, 2.5vw, 2rem);
+  margin-bottom: 0.5rem;
+  background-color: transparent;
+}
+
+.hover-content p {
+  padding: 0.5rem;
   margin: 0 0 0.5rem;
   font-size: clamp(1.2rem, 1.8vw, 1.5rem);
   font-weight: 500;
   background-color: transparent;
   border-radius: 4px;
-  }
+}
 
-  .hover-content h6 {
-  font-size: clamp(1.7rem, 2.5vw, 2rem);
-  margin-bottom: 0.5rem;
-  background-color: transparent;
-  }
+.hover-content button {
+  padding: 0.5rem 1.2rem;
+  background-color: var(--color-terciario);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Jost', 'Futura', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
-  .hover-content button {
-    padding: 8px 16px;
-    background-color: var(--color-terciario);
-    color: var(--color-texto);
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    border-radius: 8px;
-    font-family: 'Jost', 'Futura', sans-serif;
-    font-weight: 500;
-    color: white;
-    padding: 0.5rem 1.2rem;
-  }
+.hover-content button:hover {
+  background-color: var(--color-primario);
+  color: var(--color-fondo);
+}
 
-  .hover-content button:hover {
-    background-color: var(--color-primario);
-    color: var(--color-fondo);
+/* =================== TEXTO =================== */
+.parrafo-body {
+  font-size: clamp(1.4rem, 1.8vw, 1.6rem);
+}
+
+figcaption,
+legend {
+  font-family: 'Jost', sans-serif;
+  color: var(--color-texto);
 }
 
 figcaption {
-    color: var(--color-texto); 
-    font-family: 'Jost', sans-serif;
-    font-size: 1rem;
-  }
+  font-size: 1rem;
+}
 
 legend {
-    color: var(--color-texto); 
-    font-family: 'Jost', sans-serif;
-    font-size: 1.5rem;
-  }
+  font-size: 1.5rem;
+}
 
-  .forma-img.seleccionada {
-  border: 3px solid var(--color-primario); 
+/* =================== FORMAS Y SELECCIÓN =================== */
+.forma-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  cursor: pointer;
+}
+
+.forma-img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 8px rgba(180, 50, 120, 0.6);
+}
+
+.forma-img.seleccionada,
+.forma-activa {
+  border: 3px solid var(--color-primario);
   box-shadow: 0 0 10px var(--color-terciario);
   border-radius: 0.5rem;
 }
-/* Estilos de los sliders */
-    .slider-wrapper {
-      margin-bottom: 1rem;
-    }
 
-    .slider-labels {
-      font-family: 'Jost', sans-serif;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.9rem;
-      margin-top: 0.25rem;
-      padding: 0 0.5rem;
-      color: var(--color-texto);
-    }
-    .custom-slider  .noUi-connect {
-      background: var(--color-primario);
-    }
-    .custom-slider .noUi-handle {
-      border: 0.2rem solid var(--color-primario);
-      width: 2rem;
-      height: 2rem;
-      top: -0.5rem;
-      border-radius: 10%;
-      cursor: pointer;
-    }
-    .noUi-touch-area{
-      background-color:var(--color-terciario);
-    }
+.forma-activa {
+  border-color: var(--color-secundario);
+  box-shadow: 0 0 10px var(--color-secundario);
+  background-color: rgba(183, 159, 193, 0.2);
+}
 
-   .form-check-input:checked {
+/* =================== BOTONES =================== */
+.boton-home,
+.boton-cotizar,
+.boton-cita {
+  font-family: 'Jost', 'Futura', sans-serif;
+  font-weight: 500;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: var(--color-fondo);
+}
+
+.boton-home {
+  background-color: var(--color-secundario);
+}
+
+.boton-home:hover {
+  background-color: var(--color-terciario);
+}
+
+.boton-cotizar {
+  background-color: var(--color-terciario);
+}
+
+.boton-cotizar:hover {
+  background-color: var(--color-primario);
+}
+
+.boton-cita {
+  background-color: var(--color-secundario);
+}
+
+.boton-cita:hover {
+  background-color: var(--color-primario);
+}
+
+/* =================== MODAL =================== */
+#cotizarModal,
+.modal-dialog {
+  background-color: rgba(255, 251, 245, 0.5); /* color-fondo con opacidad */
+}
+
+.modal-content {
+  background-color: var(--color-terciario);
+  font-family: 'Source Serif Pro', serif;
+  color: var(--color-fondo);
+}
+
+.modal-content p {
+  font-family: 'Source Serif Pro', serif;
+  color: var(--color-fondo);
+}
+
+/* =================== SLIDERS =================== */
+.slider-wrapper {
+  margin-bottom: 1rem;
+}
+
+.slider-labels {
+  font-family: 'Jost', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+  padding: 0 10px;
+  color: var(--color-texto);
+}
+
+.slider-labels span {
+  /* Para que cada etiqueta ocupe espacio igual y se centre */
+  flex: 1;
+  text-align: center;
+}
+
+.custom-slider .noUi-connect {
+  background: var(--color-primario);
+}
+
+.custom-slider .noUi-handle {
+  border: 0.2rem solid var(--color-primario);
+  width: 2rem;
+  height: 2rem;
+  top: -0.5rem;
+  border-radius: 10%;
+  cursor: pointer;
+}
+
+.noUi-touch-area {
+  background-color: var(--color-terciario);
+}
+
+/* Estilos generales para sliders */
+.noUi-connect {
+  background: var(--color-primario) !important;
+}
+
+.noUi-horizontal .noUi-handle {
+  border: 2px solid var(--color-primario) !important;
+  background: white;
+  box-shadow: 0 0 5px var(--color-primario);
+}
+
+.noUi-horizontal .noUi-handle:hover,
+.noUi-horizontal .noUi-handle:focus {
+  box-shadow: 0 0 10px var(--color-primario);
+}
+
+#quilates-slider {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  height: 10px;
+}
+
+#quilates-slider, 
+#corte-slider, 
+#color-slider, 
+#claridad-slider,
+#fluorescencia-slider,
+#pureza-slider,
+#intensidad-slider {
+  margin: 20px 0;
+  height: 10px;        /* Altura mínima visible */
+  width: 100%;         /* O un ancho definido */
+}
+
+/* =================== FORM CHECK =================== */
+.form-check-input:checked {
   background-color: var(--color-primario);
   border-color: var(--color-primario);
 }
 
-    .boton-home{
-      font-family: 'Jost', 'Futura', sans-serif;
-      font-weight: 500;
-      background-color: var(--color-secundario);
-      color: var(--color-fondo);
-      border: none;
-      padding: 0.5rem 1.2rem;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: backgroun-color 0.3s ease; 
-    }
 
-    .boton-home:hover {
-    background-color: var(--color-terciario);
-    }
-    
-    .boton-cotizar{
-      font-family: 'Jost', 'Futura', sans-serif;
-      font-weight: 500;
-      background-color: var(--color-terciario);
-      color: var(--color-fondo);
-      border: none;
-      padding: 0.5rem 1.2rem;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: backgroun-color 0.3s ease; 
-    }
+/* =================== MODAL =================== */
 
-    .boton-cotizar:hover {
-    background-color: var(--color-primario);
-    color: var(--color-fondo);
-    }
 
-    #cotizarModal {
-        background-color: rgba(var(--color-fondo), 0.5);
-    }
+.modal-dialog {
+  background-color: transparent; /* Fondo con opacidad */
+}
 
-    .modal-dialog{
-        background-color: rgba(var(--color-fondo), 0.5);
-    }
+.modal-content {
+  background-color: var(--color-claro);
+  border-radius: 10px;
+  font-family: 'Source Serif Pro', serif;
+  color: var(--color-terciario);
+  border: 1px solid var(--color-claro); /* Borde para el modal */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
 
-    .modal-content {
-        background-color: var(--color-terciario);
-        font-family: 'Source Serif Pro', serif;
-        color: var(--color-fondo);
-    }
-    .modal-content p{
-        font-family: 'Source Serif Pro', serif;
-        color: var(--color-texto);
-        color: var(--color-fondo);
-    }
-    .boton-cita{
-      font-family: 'Jost', 'Futura', sans-serif;
-      font-weight: 500;
-      background-color: var(--color-secundario);
-      color: var(--color-fondo);
-      border: none;
-      padding: 0.5rem 1.2rem;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: backgroun-color 0.3s ease; 
-    }
-    .boton-cita:hover{
-      background-color: var(--color-primario);
-      color: var(--color-fondo);
-    }
+.modal-header {
+  background-color: var(--color-claro);
+  color: var(--color-terciario);
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+}
 
-   
-    
+.modal-header .btn-close {
+  color: var(--color-terciario);
+  font-size: 1.5rem;
+}
+
+.modal-body {
+  p{
+    color: var(--color-terciario);
+    font-weight: 600;
+  };
+  padding: 2rem;
+  font-size: 1rem;
+  color: var(--color-texto);
+}
+
+.modal-footer {
+  background-color: var(--color-primario);
+  padding: 1rem;
+}
+
+.modal-footer .btn {
+  background-color: var(--color-secundario);
+  border-radius: 5px;
+  border: none;
+  font-family: 'Jost', sans-serif;
+}
+
+.modal-footer .btn:hover {
+  background-color: var(--color-primario);
+  color: var(--color-terciario);
+}
