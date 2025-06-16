@@ -109,8 +109,34 @@
         <button class="flecha-derecha" id="btn-derecha" aria-label="Siguiente"></button>
     </section>
 
-    <!-- Filtro -->
-    <button class="btn-filtro">FILTRO</button>
+
+<!-- Botón para abrir el filtro -->
+<button class="btn-filtro" id="btnAbrirFiltro" aria-controls="filtroPanel" aria-expanded="false">
+  <i class="bi bi-sliders"></i> Filtro
+</button>
+
+<!-- Panel de filtro oculto inicialmente -->
+<aside id="filtroPanel" class="filtro-panel" aria-hidden="true">
+  <header class="filtro-header">
+    <h2>Filtrar productos</h2>
+    <button id="btnCerrarFiltro" class="cerrar-filtro" aria-label="Cerrar panel de filtro">&times;</button>
+  </header>
+
+  <section class="filtro-contenido">
+    <div class="filtro-campo">
+      <label for="kilates">Kilates</label>
+      <input type="range" id="kilates" min="10" max="100" value="50">
+      <div class="range-labels"><span>10</span><span>100</span></div>
+    </div>
+
+    <div class="filtro-campo">
+      <label for="precio">Rango de Precios</label>
+      <input type="range" id="precio" min="1000" max="100000" value="50000">
+      <div class="range-labels"><span>1000</span><span>100000</span></div>
+    </div>
+  </section>
+</aside>
+
 
     <!-- Productos -->
     <section class="grid-productos">
@@ -118,12 +144,12 @@
             <img src="./img/amatista.png" alt="Amatista">
             <button class="btn-conoce-mas">Conoce más</button>
         </article>
-        <article class="producto" data-variante="amatista">
-            <img src="./img/amatista.png" alt="Amatista">
+        <article class="producto" data-variante="zafiro">
+            <img src="./img/anilloZafiro.jpeg" alt="Zafiro">
             <button class="btn-conoce-mas">Conoce más</button>
         </article>
-        <article class="producto" data-variante="amatista">
-            <img src="./img/dolcevita.png" alt="Dolce Vita" />
+        <article class="producto" data-variante="morganita">
+            <img src="./img/dolcevita.png" alt="Morganita" />
             <button class="btn-conoce-mas">Conoce más</button>
         </article>
         <article class="producto">
@@ -159,7 +185,8 @@
             <button class="btn-conoce-mas">Conoce más</button>
         </article>
     </section>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+ 
     <script src="./catalogo.js"></script>
 </body>
 
