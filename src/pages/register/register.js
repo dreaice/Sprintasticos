@@ -65,3 +65,33 @@ function mostrarAlerta(mensaje, tipo = 'danger') {
 function limpiarFormulario() {
   document.getElementById("formularioRegistro").reset();
 }
+  // Función para resetear el formulario
+  function limpiarFormulario() {
+    document.getElementById("formularioRegistro").reset();
+  }
+  
+
+  // funcion para activar o desactivar el ver una contrasena 
+
+function activarTogglePassword() {
+  const togglePassword = (iconId, inputId) => {
+    const icono = document.getElementById(iconId);
+    const campo = document.getElementById(inputId);
+
+    if (icono && campo) {
+      icono.addEventListener("click", () => {
+        const esPassword = campo.type === "password";
+        campo.type = esPassword ? "text" : "password";
+
+        icono.classList.toggle("bi-eye-slash");
+        icono.classList.toggle("bi-eye");
+      });
+    }
+  };
+
+  togglePassword("verContrasena1", "contrasena");
+  togglePassword("verContrasena2", "confirmarContrasena");
+}
+document.addEventListener("DOMContentLoaded", () => {
+  activarTogglePassword();
+});
