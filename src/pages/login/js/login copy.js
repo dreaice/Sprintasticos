@@ -16,6 +16,7 @@ const usuario = {
     nom: "majo",
     password:"ABCDE"
   }
+  
 };
 
 
