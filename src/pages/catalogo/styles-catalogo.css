@@ -305,3 +305,54 @@ aside#filtroPanel.activo {
   font-size: 1.5rem;
   float: right;
 }
+
+/*======================
+  FOOTER 
+=======================*/
+
+footer {
+  position: static;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-claro);
+  color: black;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-family: var(--fuente-cuerpo);
+  flex-shrink: 0;
+}
+
+footer h4 {
+  font-family: var(--fuente-titulos);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+footer p,
+footer a {
+  font-size: 0.9rem;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+footer a:hover,
+footer a:focus {
+  color: var(--color-primario);
+  outline: none;
+}
+
+.social-icons a {
+  color: white;
+  transition: color 0.3s ease, transform 0.3s ease;
+  margin: 0 0.3rem;
+  display: inline-block;
+}
+
+.social-icons a:hover,
+.social-icons a:focus {
+  color: #9c27b0;
+  transform: scale(1.2);
+  outline: none;
+}
