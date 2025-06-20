@@ -114,33 +114,55 @@ body {
 
 .grid-productos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 30px;
+ /*grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));*/
+ grid-template-columns: repeat(4, 1fr);
+  gap: 120px 50px; /* 40px entre filas, 50px entre columnas */
   padding: 2rem;
   justify-items: center;
   align-items: center;
+  border-radius: 10px;  /* opcional: bordes redondeados */
 }
 
 .grid-productos > div {
+  /*
   width: 100%;
   max-width: 200px;
   height: auto;
   text-align: center;
+  padding: 10px;*/
+    width: 100%;
+  max-width: 200px;
+  height: auto;
+  text-align: center;
   padding: 10px;
+  box-sizing: border-box;
 }
 
 .producto {
+  /*
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;*/
+  width: 100%;
+  max-width: 200px;
+  height: 260px; /* o el alto total de la tarjeta */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   position: relative;
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s ease;
+
 }
 
 .producto img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  border: none;
+  width: 200px;         /* o el tamaño que desees */
+  height: 220px;        /* mismo valor para cuadrado */
+  object-fit: cover; /* Ajusta la imagen al tamaño del contenedor sin distorsión */
+  border-radius: 10px;
 }
 
 .producto:hover {
@@ -307,11 +329,11 @@ aside#filtroPanel.activo {
 }
 
 /*======================
-  FOOTER
+  FOOTER 
 =======================*/
 
 footer {
-  position: fixed;
+  position: static;
   bottom: 0;
   left: 0;
   width: 100%;
