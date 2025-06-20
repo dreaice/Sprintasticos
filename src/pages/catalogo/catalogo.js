@@ -12,7 +12,7 @@ btnDerecha?.addEventListener('click', () => {
 });
 
 btnIzquierda?.addEventListener('click', () => {
-  offset = (offset - paso < 0) ? maxDesplazamiento : offset - paso;
+  offset = (offset - paso < 0) ? 0 : offset - paso;
   pulsera.style.transform = `translateX(-${offset}px)`;
 });
  /*
