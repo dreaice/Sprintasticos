@@ -6,47 +6,37 @@
   <title>Formulario Cotización</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/nouislider@15.7.0/dist/nouislider.min.css" rel="stylesheet">
-  <link href="./styles-quotation.css" rel="stylesheet">
-  <link rel="stylesheet" href="../../styles/styles.css">
+  <link href="./styles-quotation.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../../styles/styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 
 <body>
 <!-- Barra de Navegacion -->
-    <header class="border-bottom">
-            <nav class="navbar navbar-expand-lg navbar-custom px-4 container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img class="img-fluid" src="../../resources/img/logo.png" alt="Logo AD" style="max-height: 60px;">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>            
-                <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
-                    <ul class="navbar-nav mx-auto gap-lg">
-                        <li class="nav-item"><a class="nav-link" href="../../../index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../aboutUsJewelry/aboutUsJewelry.html">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../catalogo/catalogo.html">Catálogo</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Nuestro Trabajo</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../quotation/quotation.html">Cotizador</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../contactUs/contactUs.html">Contacto</a></li>
-                    </ul>
-            
-                    <div class="d-flex align-items-center gap-2">
-                        <a href="../bookAppointment/bookAppointment.html" class="btn btn-agenda">Agenda tu Cita</a>
-                        <a href="../login/login.html" class="btn btn-login">Login</a>
-                        <a href="../cart/cart.html" class="ms-2 cart-icon"><i class="bi bi-cart"></i></a>
-                    </div>
-                </div>
-            </nav>
-        </header>
+ <div id="navbar-container"></div>
+ 
 
-<main class="container py-5">
+ <main class="container py-5">
  <h2 class="text-center mb-2">Cotiza tu pieda preciosa</h2>
+
+ <!-- Mensaje explicativo debajo del título -->
+    <div class="alert alert-info text-center mb-4">
+      <strong>¡Personaliza tu joya!</strong> Haz clic en el ícono de interrogación junto a cada característica para
+      obtener más detalles sobre cómo influye en la cotización de tu piedra preciosa.
+    </div>
+  
+
   <form class="row d-flex justify-content-center align-items-center vh-70">
 <!-- columna de forma y pureza -->
     <section class="col-12 col-md-12 col-lg-6 p-4 pt-0 pb-0"> 
     <!-- Forma -->
     <fieldset class="mb-1">
-      <legend class="form-label">Forma</legend>
+      <legend class="form-label">Forma
+        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modalForma">
+              <i class="bi bi-question-circle"></i>
+        </button>
+      </legend>
+
       <section class="d-flex flex-wrap justify-content-center gap-3">
         <figure class="d-flex flex-column align-items-center">
         <img src="./img/redondoForma.webp" alt="Forma Redonda" class="img-thumbnail forma-img" data-forma="Redondo" style="width: 5rem; height: 5rem; cursor: pointer;">
@@ -93,7 +83,11 @@
 
             <!-- pureza  -->
     <fieldset class="slider-wrapper">
-      <legend class="form-label">Pureza</legend>
+      <legend class="form-label">Pureza
+        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modalPureza">
+              <i class="bi bi-question-circle"></i>
+        </button>
+      </legend>
       <div id="pureza-slider" class="custom-slider"></div>
       <div class="slider-labels">
         <span>Con incrustaciones</span><span>Incrustaciones visibles</span><span>Limpio a simple vista</span>
@@ -108,7 +102,11 @@
 
     <!-- Quilates -->
     <fieldset class="slider-wrapper">
-      <legend class="form-label">Quilates</legend>
+      <legend class="form-label">Quilates
+        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modalQuilates">
+              <i class="bi bi-question-circle"></i>
+        </button>
+      </legend>
       <div id="quilates-slider" class="custom-slider"></div>
         <legend class="slider-labels mt-2">
         <span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
@@ -122,7 +120,11 @@
 
     <!-- Intensidad -->
     <fieldset class="slider-wrapper">
-      <legend class="form-label">Intensidad</legend>
+      <legend class="form-label">Intensidad
+        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modalIntensidad">
+              <i class="bi bi-question-circle"></i>
+        </button>
+      </legend>
       <div id="intensidad-slider" class="custom-slider"></div>
       <div class="slider-labels">
         <span>Medio intenso</span><span>Intenso</span><span>Vivido</span><span>Profundo</span><span>Oscuro</span>
@@ -138,10 +140,14 @@
     </div>
 
   </form>
-</main>
+ </main>
+
+<!-- Aqui va el footer -->
+ <div id="footer-container"></div>
+
 
 <!-- Modal Cotizar -->
-<section class="modal fade" id="cotizarModal" tabindex="-1" aria-labelledby="cotizarModalLabel" aria-hidden="true">
+ <section class="modal fade" id="cotizarModal" tabindex="-1" aria-labelledby="cotizarModalLabel" aria-hidden="true">
   <section class="modal-dialog modal-dialog-centered">
     <article class="modal-content">
       
@@ -158,56 +164,98 @@
 
     </article>
   </section>
-</section>
+ </section>
 
-<footer class="footer-contacto">
-
-        <div class="container">
-          <div class="row text-center text-md-start">
-            <div class="col-12 col-md-4 mb-4 mb-md-0">
-              <h5 class="mb-2 text-center text-md-start">Nuestras redes sociales</h5>
-              <div class="d-flex justify-content-between justify-content-md-start gap-3 mx-4 social-icons ">
-                <a href="#" ><i class="bi bi-tiktok fs-4"></i></a>
-                <a href="#" ><i class="bi bi-whatsapp fs-4"></i></a>
-                <a href="#"     ><i class="bi bi-instagram fs-4"></i></a>
-              </div>
-              <p class="text-center text-md-start">Conéctate con nosotros para no perderte ninguna novedad.</p>
-            </div>
-      
-            <!-- Sección 2: Enlaces Útiles -->
-            <div class="col-12 col-md-4 mb-4 mb-md-0">
-              <h5>Enlaces Útiles</h5>
-              <ul class="list-unstyled">
-                <li><a href="../../../index.html" class="text-decoration-none">Inicio</a></li>
-                <li><a href="../src/documents/DocumentoLegal.pdf" class="text-decoration-none">Terminos y condiciones</a></li>
-                <li><a href="../src/documents/DocumentoLegal.pdf" class="text-decoration-none">Avisos legales</a></li>
-                <li><a href="../aboutUsJewelry/aboutUsJewelry.html" class="text-decoration-none">Mision, Vision y Valores</a></li>
-              </ul>
-            </div>
-      
-            <!-- Sección 3: Contacto -->
-            <div class="col-12 col-md-4">
-              <h5>Contacto</h5>
-              <p class="mb-1">Email: info@ejemplo.com</p>
-              <p class="mb-1">Tel: (52) 456-7890</p>
-              <p class="mb-0">Dirección: Calle Ficticia 123, Guadalajara</p>
-            </div>
-          </div>
-      
-          <hr class="bg-light">
-      
-          <div class="text-center">
-            <p class="mb-0">© 2025 Aurum Designers. Todos los derechos reservados.</p>
-
-
-            <p>© 2025 Development by <a href="../team/team.html" id="link-sprintasticos">Sprintásticos.</a> Todos los derechos
-                reservados.</p>
-
+ <!-- Modal Forma -->
+  <div class="modal fade" id="modalForma" tabindex="-1" aria-labelledby="modalFormaLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalFormaLabel">Forma</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-    </footer>
+        <div class="modal-body">
+          <p>La forma es el diseño externo de la piedra. Afecta su brillo y estilo visual.</p>
+          <ul>
+            <li><strong>Redondo:</strong> El corte más brillante y clásico.</li>
+            <li><strong>Rectángulo (Emerald):</strong> Elegante y con líneas limpias.</li>
+            <li><strong>Asscher:</strong> Similar al esmeralda pero cuadrado, muy brillante.</li>
+            <li><strong>Cojín (Cushion):</strong> Forma cuadrada con bordes redondeados.</li>
+            <li><strong>Corazón:</strong> Romántica y simbólica.</li>
+            <li><strong>Cuadrado (Princess):</strong> Moderna y muy brillante.</li>
+            <li><strong>Ovalado:</strong> Alarga visualmente el dedo.</li>
+            <li><strong>Marquesa:</strong> Forma alargada con extremos puntiagudos.</li>
+            <li><strong>Radiante:</strong> Combinación entre corte esmeralda y brillante.</li>
+            <li><strong>Pera:</strong> Mezcla de redondo y marquesa, elegante y delicado.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Pureza -->
+  <div class="modal fade" id="modalPureza" tabindex="-1" aria-labelledby="modalFormaLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalFormaLabel">Pureza</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Se refiere a la presencia de inclusiones o imperfecciones dentro de la piedra. A mayor pureza, mayor valor estético y comercial.</p>
+          <ul>
+            <li><strong>Con incrustaciones:</strong>Inclusiones visibles que afectan la transparencia.</li>
+            <li><strong>Incrustaciones visibles:</strong>Imperfecciones perceptibles bajo lupa, mínimas a simple vista.</li>
+            <li><strong>Limpio a simple vista:</strong>Sin inclusiones notables a simple vista, alto grado de pureza.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modal Quilates -->
+  <div class="modal fade" id="modalQuilates" tabindex="-1" aria-labelledby="modalQuilatesLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalQuilatesLabel">Quilates</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>El peso de la piedra. A mayor quilataje, más grande y costosa suele ser la gema.</p>
+          <p>Ejemplo: 0.5 ct = piedra pequeña, 2.0 ct = piedra mediana-grande.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Intensidad -->
+  <div class="modal fade" id="modalIntensidad" tabindex="-1" aria-labelledby="modalFormaLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalFormaLabel">Intensidad</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Define cuán fuerte o saturado es el color de la piedra, un factor clave en su atractivo visual.</p>
+          <ul>
+            <li><strong>Medio intenso:</strong>Tono perceptible pero suave.</li>
+            <li><strong>Intenso:</strong>Color definido y bien distribuido.</li>
+            <li><strong>Vivido:</strong>Color brillante, saturado y llamativo.</li>
+            <li><strong>Profundo:</strong>Tono oscuro pero rico.</li>
+            <li><strong>Oscuro:</strong>Color muy intenso que puede opacar el brillo natural.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/nouislider@15.7.0/dist/nouislider.min.js"></script>
 <script src="./form.js"></script>
+<script src="../../components/script.js"></script>
+
 </body>
 </html>
