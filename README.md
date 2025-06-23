@@ -71,9 +71,7 @@ Trabajamos en equipo utilizando la metodología **Scrum**, aplicando buenas prá
 |----------------------------------|------------------|
 | Aguirre López Andrea Eunice      | **Scrum Master** |
 | Aragón Suárez Jorge Daniel       | **Product Owner**|
-| Bolaños Torres Maria del Rocio   | Developer        |
 | Delgado Maza Lilian              | Developer        |
-| Garza Dabdoud Juan Carlos        | Developer        |
 | Ginez Eligio Joshua Edwin        | Developer        |
 | González Rangel Maria José       | Developer        |
 | Huescas Vergara Abizaic Salvador | Developer        |
