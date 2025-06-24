@@ -6,8 +6,6 @@
  Un proyecto desarrollado con pasión por el equipo Sprintasticos <br><br>
   <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" alt="Java"/>
   <img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white" alt="Spring"/>
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React"/>
-  <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap"/>
 </div>
 
 ---
@@ -45,7 +43,6 @@ Trabajamos en equipo utilizando la metodología **Scrum**, aplicando buenas prá
 
 ### Frontend
 <div align="center">
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React"/>
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"/>
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"/>
   <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap"/>
@@ -64,8 +61,6 @@ Trabajamos en equipo utilizando la metodología **Scrum**, aplicando buenas prá
   <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git"/>
   <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
   <img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white" alt="VS Code"/>
-  <img src="https://img.shields.io/badge/Apache_NetBeans_IDE-1B6AC6?style=for-the-badge&logo=apache-netbeans-ide&logoColor=white" alt="NetBeans"/>
-  <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman"/>
 </div>
 
 ---
@@ -76,9 +71,7 @@ Trabajamos en equipo utilizando la metodología **Scrum**, aplicando buenas prá
 |----------------------------------|------------------|
 | Aguirre López Andrea Eunice      | **Scrum Master** |
 | Aragón Suárez Jorge Daniel       | **Product Owner**|
-| Bolaños Torres Maria del Rocio   | Developer        |
 | Delgado Maza Lilian              | Developer        |
-| Garza Dabdoud Juan Carlos        | Developer        |
 | Ginez Eligio Joshua Edwin        | Developer        |
 | González Rangel Maria José       | Developer        |
 | Huescas Vergara Abizaic Salvador | Developer        |
