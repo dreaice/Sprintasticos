@@ -17,7 +17,8 @@
   <!-- Aqui se pega el navbar -->
   <div id="navbar-container"></div>
 
-  <main class="producto-contenedor">
+   <main class="producto-contenedor">
+    <!--Columna izquierda-->
     <section class="imagenes-producto">
       <div class="imagen-principal">
         <img id="imagenPrincipal" src="" alt="Imagen del producto" />
@@ -28,7 +29,8 @@
         <div class="vistaprevia"><img src="" alt="vista previa" /></div>
       </div>
     </section>
-
+    
+    <!--Columna derecha-->
     <section class="info-producto">
       <h1 id="nombre-producto"></h1>
       <div class="producto-codigos">
@@ -37,33 +39,32 @@
       </div>
       <p class="precio" id="precio-producto"></p>
       <p class="disponibilidad" id="disponibilidad-producto"></p>
-    </section>
 
-    <div class="separador"></div>
 
-    <div class="selector-piedra">
-      <h3>Elige tu piedra preciosa</h3>
-      <div class="piedra-container">
-        <!-- Opciones de piedra -->
-        <button class="btn-piedra" data-variante="amatista">
-          <img src="./img/PiedraAmatista.jpeg" alt="Amatista" />
-          <span class="piedra-nombre">Amatista</span>
-        </button>
-        <button class="btn-piedra" data-variante="morganita">
-          <img src="./img/piedraTurmalina.jpeg" alt="Morganita" />
-          <span class="piedra-nombre">Turmalina</span>
-        </button>
-        <button class="btn-piedra" data-variante="zafiro">
-          <img src="./img/piedraZafiro.jpeg" alt="Zafiro Rosa" />
-          <span class="piedra-nombre">Zafiro Rosa</span>
-        </button>
+      <!--Selector de piedra preciosa-->
+      <div class="selector-piedra">
+        <h3>Elige tu piedra preciosa</h3>
+        <div class="piedra-container">
+          <!-- Opciones de piedra -->
+          <button class="btn-piedra" data-variante="amatista">
+            <img src="./img/PiedraAmatista.jpeg" alt="Amatista" />
+            <span class="piedra-nombre">Amatista</span>
+          </button>
+          <button class="btn-piedra" data-variante="morganita">
+            <img src="./img/piedraTurmalina.jpeg" alt="Morganita" />
+            <span class="piedra-nombre">Turmalina</span>
+          </button>
+          <button class="btn-piedra" data-variante="zafiro">
+            <img src="./img/piedraZafiro.jpeg" alt="Zafiro Rosa" />
+            <span class="piedra-nombre">Zafiro Rosa</span>
+          </button>
+        </div>
       </div>
-    </div>
+      
+      <button class="btn-agrega-carrito">Agregar al carrito</button>
+      <button class="btn-compra">Compra</button>
 
-    <div class="separador"></div>
-
-    <button class="btn-agrega-carrito">Agregar al carrito</button>
-    <button class="btn-compra">Compra</button>
+    </section>    
   </main>
 
   <!-- Sección del carrito que aparece cuando se agrega un producto -->
