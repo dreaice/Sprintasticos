@@ -1,12 +1,16 @@
 # 💎 E-commerce de Joyería Personalizada 💎
 
- 
-
 <div align="center">
  Un proyecto desarrollado con pasión por el equipo Sprintasticos <br><br>
   <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" alt="Java"/>
   <img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white" alt="Spring"/>
 </div>
+
+---
+
+## 🔗 Navegación del Proyecto
+
+- **⚙️ [Ir al Repositorio Backend](https://github.com/dreaice/Sprintasticos-backend)** - API REST y servicios del servidor
 
 ---
 
@@ -31,7 +35,7 @@ Este es un innovador e-commerce especializado en joyería personalizada, donde c
 
 ---
 
-## 🎓 Proyecto Académico
+## 🎓 Proyecto 
 
 Este proyecto fue desarrollado como parte del programa de formación **Java Full Stack Web Developer** del bootcamp **Generation México** de la corte **54** por el equipo **Sprintasticos**.
 
@@ -53,7 +57,7 @@ Trabajamos en equipo utilizando la metodología **Scrum**, aplicando buenas prá
 <div align="center">
   <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" alt="Java"/>
   <img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white" alt="Spring"/>
-  <img src="https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white" alt="Maven"/>
+  <img src="https://img.shields.io/badge/Gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white" alt="Gradle"/>
 </div>
 
 ### Herramientas de Desarrollo y Gestión
@@ -110,24 +114,33 @@ Pasos:
 cd Sprintasticos
 ```
 
-### 🚀 3. Configuración del Backend
-
-Pendiente....
-
-### 💻 4. Configuración del Frontend
-
-Pendiente....
-
 ---
 
 ## 📊 Estructura del Proyecto
 
 ```
 Sprintasticos/
-├── backend/                 # Proyecto Spring Boot
-│   └── src/
-├── frontend/               # Proyecto React
-│   └── src/
+├── src/                        # Código fuente del frontend
+│   ├── aboutUsJewelry/         # Página "Acerca de nosotros"
+│   ├── admin/                  # Panel de administración
+│   ├── bookAppointment/        # Sistema de citas
+│   ├── cart/                   # Carrito de compras
+│   ├── catalogo/               # Catálogo de productos
+│   ├── contactUs/              # Página de contacto
+│   ├── forgotPassword/         # Recuperación de contraseña
+│   ├── home/                   # Página principal
+│   ├── inventory/              # Gestión de inventario
+│   ├── login/                  # Inicio de sesión
+│   ├── ourCreations/           # Galería de creaciones
+│   ├── producto/               # Vista de productos individuales
+│   ├── quotation/              # Sistema de cotizaciones
+│   └── register/               # Registro de usuarios
+├── resources/                  # Recursos estáticos
+│   └── img/                    # Imágenes y logos
+│       └── logo.png
+├── styles/                     # Estilos CSS
+│   ├── styles.css
+│   └── index.html
 └── README.md
 ```
 
