@@ -58,6 +58,7 @@ Trabajamos en equipo utilizando la metodología **Scrum**, aplicando buenas prá
   <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" alt="Java"/>
   <img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white" alt="Spring"/>
   <img src="https://img.shields.io/badge/Gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white" alt="Gradle"/>
+  <img src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL"/>
 </div>
 
 ### Herramientas de Desarrollo y Gestión
@@ -161,6 +162,11 @@ Sprintasticos/
 Para cualquier consulta o sugerencia sobre el proyecto, no dudes en contactar al equipo Sprintasticos.
 
 ---
+
+<div align="center">
+  <sub>Desarrollado con ❤️ por el equipo Sprintasticos</sub>
+</div>
+
 
 <div align="center">
   <sub>Desarrollado con ❤️ por el equipo Sprintasticos</sub>
