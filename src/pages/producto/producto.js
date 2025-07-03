@@ -22,27 +22,27 @@ if (!variante) {
 
 const productos = {
   amatista: {
-    nombre: "Anillo abrazo amatistas",
-    imagenPrincipal: "./img/anilloAmatista.jpeg",
-    vistasPrevias: ["./img/anilloAmatista.jpeg", "./img/anilloAmatista.jpeg", "./img/anilloAmatista.jpeg"],
+    nombre: "Aretes Brillo Amatista",
+    imagenPrincipal: "./img/ARETEZAFIROAZUL.webp",
+    vistasPrevias: ["./img/ARETEZAFIROAZUL.webp", "./img/ARETETURMALINA.jpg", "./img/ARETEZAFIROrosa.jpg"],
     precio: "$15,000.00 MXN",
     disponibilidad: "Disponible",
     id: "0014",
     ot: "0024"
   },
   morganita: {
-    nombre: "Anillo abrazo turmalina",
-    imagenPrincipal: "./img/anilloTurmalina.jpeg",
-    vistasPrevias: ["./img/anilloTurmalina.jpeg", "./img/anilloTurmalina.jpeg", "./img/anilloTurmalina.jpeg"],
+    nombre: "Aretes Brillo Turmalina",
+    imagenPrincipal: "./img/ARETETURMALINA.jpg",
+    vistasPrevias: ["./img/ARETETURMALINA.jpg", "./img/ARETEZAFIROAZUL.webp", "./img/ARETEZAFIROrosa.jpg"],
     precio: "$17,500.00 MXN",
     disponibilidad: "Disponible",
     id: "0024",
     ot: "0034"
   },
   zafiro: {
-    nombre: "Anillo abrazo zafiro rosa",
-    imagenPrincipal: "./img/anilloZafiro.jpeg",
-    vistasPrevias: ["./img/anilloZafiro.jpeg", "./img/anilloZafiro.jpeg", "./img/anilloZafiro.jpeg"],
+    nombre: "Aretes Brillo Zafiro Rosa",
+    imagenPrincipal: "./img/ARETEZAFIROrosa.jpg",
+    vistasPrevias: ["./img/ARETEZAFIROrosa.jpg", "./img/ARETEZAFIROAZUL.webp", "./img/ARETETURMALINA.jpg"],
     precio: "$19,000.00 MXN",
     disponibilidad: "Disponible",
     id: "0034",
