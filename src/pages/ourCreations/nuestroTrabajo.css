@@ -1,0 +1,376 @@
+/* Hero Section - Usando colores de tu paleta */
+.hero-section {
+    background: linear-gradient(135deg, var(--color-primario) 0%, var(--color-terciario) 100%);
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="%23ffffff08" points="0,0 1000,300 1000,1000 0,700"/></svg>');
+    background-size: cover;
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+    z-index: 2;
+    position: relative;
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.hero-title {
+    font-family: var(--fuente-titulos);
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    animation: slideUp 1s ease-out;
+}
+
+.hero-subtitle {
+    font-family: var(--fuente-cuerpo);
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+    font-weight: 400;
+    animation: slideUp 1s ease-out 0.3s both;
+}
+
+.hero-decoration {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.floating-gem {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--color-claro);
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: float 6s ease-in-out infinite;
+}
+
+.floating-gem:nth-child(1) {
+    top: 20%;
+    left: 15%;
+    animation-delay: 0s;
+    background: var(--color-secundario);
+}
+
+.floating-gem:nth-child(2) {
+    top: 30%;
+    right: 20%;
+    animation-delay: 2s;
+    background: var(--color-claro);
+}
+
+.floating-gem:nth-child(3) {
+    bottom: 25%;
+    left: 20%;
+    animation-delay: 4s;
+    background: var(--color-terciario);
+}
+
+/* Catalog Section */
+.catalog-section {
+    padding: 4rem 0;
+    background: var(--color-fondo);
+}
+
+.catalog-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+    padding: 0 2rem;
+}
+
+.catalog-intro h2 {
+    font-family: var(--fuente-titulos);
+    font-size: 3rem;
+    color: var(--color-primario);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.catalog-intro p {
+    font-family: var(--fuente-cuerpo);
+    font-size: 1.2rem;
+    color: var(--color-texto);
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+/* Jewelry Grid */
+.jewelry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.jewelry-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(116, 3, 84, 0.1);
+    transition: all 0.4s ease;
+    position: relative;
+    transform: translateY(0);
+}
+
+.jewelry-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 50px rgba(116, 3, 84, 0.2);
+}
+
+.jewelry-image {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+}
+
+.jewelry-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.jewelry-card:hover .jewelry-image img {
+    transform: scale(1.1);
+}
+
+.jewelry-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(116, 3, 84, 0.9) 0%, rgba(189, 88, 119, 0.9) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.jewelry-card:hover .jewelry-overlay {
+    opacity: 1;
+}
+
+.jewelry-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.action-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background: white;
+    color: var(--color-primario);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action-btn:hover {
+    background: var(--color-claro);
+    color: var(--color-primario);
+    transform: scale(1.1);
+}
+
+.jewelry-content {
+    padding: 2.5rem;
+}
+
+.jewelry-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.jewelry-title {
+    font-family: var(--fuente-titulos);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-primario);
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.jewelry-subtitle {
+    font-family: var(--fuente-cuerpo);
+    font-size: 1.1rem;
+    color: var(--color-terciario);
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.jewelry-description {
+    font-family: var(--fuente-cuerpo);
+    color: var(--color-texto);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    text-align: justify;
+    font-size: 0.95rem;
+}
+
+.jewelry-description:last-of-type {
+    margin-bottom: 0;
+}
+
+/* Animations */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Intersection Observer Animation */
+.jewelry-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.jewelry-card.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .jewelry-grid {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .catalog-intro h2 {
+        font-size: 2.2rem;
+    }
+
+    .catalog-intro p {
+        font-size: 1.1rem;
+    }
+
+    .jewelry-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+
+    .jewelry-content {
+        padding: 2rem;
+    }
+
+    .jewelry-title {
+        font-size: 1.6rem;
+    }
+
+    .jewelry-subtitle {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .catalog-intro h2 {
+        font-size: 1.8rem;
+    }
+
+    .jewelry-grid {
+        padding: 0 0.5rem;
+    }
+
+    .jewelry-content {
+        padding: 1.5rem;
+    }
+
+    .jewelry-image {
+        height: 220px;
+    }
+}
+
+/* Custom scrollbar usando tus colores */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-fondo);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, var(--color-primario), var(--color-terciario));
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, var(--color-terciario), var(--color-secundario));
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
