@@ -30,17 +30,17 @@ function agregarProducto() {
       id_stone: stoneId
     }
   };
-  productosArray.push(nuevoProducto);
+  productosArray.push(producto);
   
   console.log(JSON.stringify(productosArray, null, 2));
-  mostrarProducto(nuevoProducto);
+  mostrarProducto(producto);
   
   fetch("http://localhost:8080/api/productos",{
     method:"POST",
     headers:{
       "Content-Type":"application/json"
     },
-    body:JSON.stringify(nuevoProducto)
+    body:JSON.stringify(producto)
 }).then(response=>{
   if(response.ok){
     console.log("Producto guardado en la bd");
@@ -58,7 +58,7 @@ function agregarProducto() {
   alert("¡Producto agregado correctamente!");
 
 
-
+}
 
 // Función para mostrar un producto en el contenedor
 function mostrarProducto(producto) {
