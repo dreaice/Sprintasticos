@@ -8,10 +8,10 @@ function agregarProducto() {
   const price = parseFloat(document.getElementById("precio").value.trim());
   const material = document.getElementById("material").value.trim();
   const image_url = document.getElementById("imgUrl").value.trim();
-  const stock = parseInt(document.getElementById("stock").value.trim()); 
-  const categoryId = parseInt(document.getElementById("category").value.trim()); 
-  const stoneId = parseInt(document.getElementById("stone").value()); // 
-  if (!name || !description || !price || !stock || !categoryId || !stoneId ) {
+  const stock = parseInt(document.getElementById("stock").value.trim());
+  const categoryId = parseInt(document.getElementById("category").value.trim());
+  const stoneId = parseInt(document.getElementById("stone").value.trim()); // 
+  if (!name || !description || !price || !stock || !categoryId || !stoneId) {
     alert("Por favor completa todos los campos.");
     return;
   };
@@ -30,35 +30,53 @@ function agregarProducto() {
       id_stone: stoneId
     }
   };
-  productosArray.push(nuevoProducto);
-  
+  productosArray.push(producto);
+
   console.log(JSON.stringify(productosArray, null, 2));
-  mostrarProducto(nuevoProducto);
-  
-  fetch("http://localhost:8080/api/productos",{
-    method:"POST",
-    headers:{
-      "Content-Type":"application/json"
-    },
-    body:JSON.stringify(nuevoProducto)
-}).then(response=>{
-  if(response.ok){
-    console.log("Producto guardado en la bd");
-  } else{
-    console.log("error al guardar");
-  }
-});
 
 
-  document.getElementById("nombre").value = "";
-  document.getElementById("descripcion").value = "";
-  document.getElementById("precio").value = "";
-  document.getElementById("imgUrl").value = "";
+  addProducto(producto);
+
+  mostrarProducto(producto);
+
+  limpiarFormulario();
 
   alert("¡Producto agregado correctamente!");
 
 
 }
+
+function limpiarFormulario() {
+  document.getElementById("nombre").value = "";
+  document.getElementById("descripcion").value = "";
+  document.getElementById("precio").value = "";
+  document.getElementById("material").value = "";
+  document.getElementById("imgUrl").value = "";
+  document.getElementById("stock").value = "";
+  document.getElementById("category").value = "";
+  document.getElementById("stone").value = "";
+}
+
+
+
+
+function addProducto(producto) {
+
+  fetch("http://localhost:8081/api/productos", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(producto)
+  }).then(response => {
+    if (response.ok) {
+      console.log("Producto guardado en la bd");
+    } else {
+      console.log("error al guardar");
+    }
+  });
+}
+
 
 // Función para mostrar un producto en el contenedor
 function mostrarProducto(producto) {
