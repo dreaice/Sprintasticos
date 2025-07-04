@@ -34,23 +34,8 @@ function agregarProducto() {
   productosArray.push(producto);
   console.log(JSON.stringify(productosArray, null, 2));
 
-  // Save to both APIs
-  fetch("http://localhost:8080/api/productos", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(producto)
-  }).then(response => {
-    if (response.ok) {
-      console.log("Producto guardado en la bd (8080)");
-    } else {
-      console.log("Error al guardar en bd (8080)");
-    }
-  });
 
   addProducto(producto);
-  mostrarProducto(producto);
   limpiarFormulario();
   alert("¡Producto agregado correctamente!");
 }
@@ -73,22 +58,33 @@ function addProducto(producto) {
       "Content-Type": "application/json"
     },
     body: JSON.stringify(producto)
-  }).then(response => {
-    if (response.ok) {
-      console.log("Producto guardado en la bd (8081)");
-    } else {
-      console.log("Error al guardar en bd (8081)");
-    }
-  });
+  })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Error al guardar en bd (8081)");
+      }
+      return response.json(); // ✅ leer el objeto con ID
+    })
+    .then(data => {
+      console.log("data", data);
+      producto.id = data.id_jewelry; // asignar ID devuelto por backend
+      productosArray.push(producto); // agregar al array
+      mostrarProducto(producto);     // mostrar en pantalla con ID válido
+    })
+    .catch(error => {
+      console.error(error);
+      alert("Error al guardar el producto");
+    });
 }
 
 // Función para mostrar un producto en el contenedor
 function mostrarProducto(producto) {
+  console.log("mostrarProducto", producto.id);
   const contenedor = document.getElementById("productos");
 
   const productoCard = document.createElement("div");
   productoCard.className = "producto card";
-
+  productoCard.setAttribute("data-id", producto.id);
   productoCard.innerHTML = `
     <div class="producto-header">
       <strong>${producto.name}</strong>
@@ -104,19 +100,9 @@ function mostrarProducto(producto) {
     </div>`;
 
   contenedor.appendChild(productoCard);
+
 }
 
-// Función para modificar producto
-function modificarProducto(button) {
-  const productoCard = button.closest('.producto');
-  // TODO: Implement product modification logic
-}
-
-// Función para eliminar producto
-function eliminarProducto(button) {
-  const productoCard = button.closest('.producto');
-  productoCard.remove();
-}
 
 // Función para borrar todos los productos
 function borrarTodo() {
@@ -128,15 +114,95 @@ function borrarTodo() {
 
 // Función para cargar los productos desde el JSON y mostrar en la página
 function cargarProductos() {
-  fetch('./data/joyas.json')
+  fetch('http://localhost:8081/api/productos')
     .then(response => response.json())
     .then(data => {
       data.forEach(producto => {
+        producto.id = producto.id_jewelry;
         productosArray.push(producto);
         mostrarProducto(producto);
       });
     })
     .catch(error => console.log('Error al cargar los productos:', error));
+}
+function modificarProducto(button) {
+  const productoCard = button.closest('.producto');
+  const id = productoCard.getAttribute("data-id");
+
+  if (!id) {
+    alert("ID de producto no encontrado.");
+    return;
+  }
+
+
+  // Simulación: mostrar datos en formulario (aquí puedes mejorar más)
+  const name = prompt("Nuevo nombre:");
+  const description = prompt("Nueva descripción:");
+  const price = prompt("Nuevo precio:");
+  const material = prompt("Nuevo material:");
+  const image_url = prompt("Nueva imagen:");
+  const stock = prompt("Nuevo stock:");
+  const categoryId = prompt("Nueva categoría:");
+  const stoneId = prompt("Nueva piedra:");
+  if (!name || !price) return;
+
+  const updatedProducto = {
+    id: parseInt(id),
+    name: name,
+    description: description,
+    price: parseFloat(price),
+    material: material,
+    image_url: image_url,
+    stock: stock,
+    category: { id_category: categoryId },
+    stone: { id_stone: stoneId }
+  };
+
+
+
+  fetch(`http://localhost:8081/api/productos/${id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(updatedProducto)
+  })
+    .then(response => {
+      if (response.ok) {
+        alert("Producto modificado correctamente");
+        location.reload(); // o vuelve a renderizar el producto
+      } else {
+        alert("Error al modificar producto");
+      }
+    })
+    .catch(error => {
+      console.error("Error en PUT:", error);
+    });
+}
+
+function eliminarProducto(button) {
+  const productoCard = button.closest('.producto');
+  const id = productoCard.getAttribute("data-id"); // 👈 obtener ID
+
+  if (!id) {
+    alert("ID de producto no encontrado.");
+    return;
+  }
+
+  fetch(`http://localhost:8081/api/productos/${id}`, {
+    method: "DELETE"
+  })
+    .then(response => {
+      if (response.ok) {
+        productoCard.remove(); // eliminar de la vista
+        alert("Producto eliminado correctamente");
+      } else {
+        alert("Error al eliminar el producto");
+      }
+    })
+    .catch(error => {
+      console.error("Error en la solicitud DELETE:", error);
+    });
 }
 
 // Cargar los productos al cargar la página
