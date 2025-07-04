@@ -1,6 +1,7 @@
 body {
   overflow-x: hidden;
-  background: #FFFBF5 !important;
+  background: #FFFBF5;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 /*carrusel menu*/
@@ -18,7 +19,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 70px;
+  margin: 50px auto;
+  max-width: 1000px;
+  padding: 30px;
 }
 
 .pulsera-ventana {
@@ -47,7 +50,7 @@ body {
 .circulo-grande {
   width: 90px;
   height: 90px;
-  border: 1.5px solid #Ffbf00;
+  border: 1.5px solid #740354;
   border-radius: 50%;
   overflow: hidden;
   background: #FFFBF5;
@@ -57,12 +60,17 @@ body {
   box-shadow:
     inset -3px -3px 8px rgba(255, 255, 255, 0.6),
     inset 3px 3px 8px rgba(0, 0, 0, 0.1),
-    2px 2px 6px rgba(0, 0, 0, 0.2);
+    2px 2px 6px rgba(116, 3, 84, 0.2);
   transition: transform 0.3s ease;
 }
 
 .circulo-grande:hover {
   transform: scale(1.05) rotateX(5deg) rotateY(5deg);
+  border-color: #BD5877;
+  box-shadow:
+    inset -3px -3px 8px rgba(255, 255, 255, 0.6),
+    inset 3px 3px 8px rgba(0, 0, 0, 0.1),
+    2px 2px 6px rgba(189, 88, 119, 0.3);
 }
 
 .imagen-circular {
@@ -75,6 +83,12 @@ body {
   font-size: 14px;
   text-align: center;
   margin-top: 5px;
+  color: #2C3E50;
+  transition: color 0.3s ease;
+}
+
+.pieza:hover p {
+  color: #740354;
 }
 
 
@@ -85,47 +99,55 @@ body {
   width: 40px;
   height: 6px;
   background: #FFFBF5;
-  border: 1px solid #Ffbf00;
+  border: 1px solid #740354;
 }
 
 
 .flecha-derecha,
 .flecha-izquierda {
-  background-color: transparent;
+  background: #740354;
   border: none;
-  width: 0;
-  height: 0;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
   cursor: pointer;
-  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(116, 3, 84, 0.2);
 }
 
-.flecha-derecha {
-  border-top: 15px solid transparent;
-  border-bottom: 15px solid transparent;
-  border-left: 20px solid #d4af37;
-  margin-left: 10px;
+.flecha-derecha:hover,
+.flecha-izquierda:hover {
+  background: #BD5877;
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(116, 3, 84, 0.3);
 }
 
-.flecha-izquierda {
-  border-top: 15px solid transparent;
-  border-bottom: 15px solid transparent;
-  border-right: 20px solid #d4af37;
-  margin-right: 10px;
+.flecha-derecha::after {
+  content: '▶';
+  color: white;
+  font-size: 14px;
+}
+
+.flecha-izquierda::after {
+  content: '◀';
+  color: white;
+  font-size: 14px;
 }
 
 /* PRODUCTOS */
 
 .grid-productos {
   display: grid;
-  /*grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));*/
-  grid-template-columns: repeat(4, 1fr);
-  gap: 120px 50px;
-  /* 40px entre filas, 50px entre columnas */
-  padding: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
   justify-items: center;
   align-items: center;
-  border-radius: 10px;
-  /* opcional: bordes redondeados */
 }
 
 .grid-productos>div {
@@ -144,15 +166,9 @@ body {
 }
 
 .producto {
-  /*
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.3s ease;*/
   width: 100%;
   max-width: 200px;
   height: 260px;
-  /* o el alto total de la tarjeta */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -160,8 +176,9 @@ body {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.3s ease;
-
+  transition: all 0.3s ease;
+  padding: 10px;
+  border-radius: 15px;
 }
 
 .producto img {
@@ -175,31 +192,38 @@ body {
 }
 
 .producto:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
 .producto .btn-conoce-mas {
   position: absolute;
-  bottom: 10px;
+  bottom: 15px;
   left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.7);
-  color: #fff;
+  transform: translateX(-50%) translateY(10px);
+  background: #BD5877;
+  color: white;
   border: none;
-  padding: 8px 12px;
-  font-size: 14px;
-  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 20px;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: all 0.3s ease;
   pointer-events: none;
+  box-shadow: 0 4px 15px rgba(189, 88, 119, 0.3);
 }
 
 .producto:hover .btn-conoce-mas {
   opacity: 1;
+  transform: translateX(-50%) translateY(0);
   pointer-events: auto;
-  background-color: #BD5877;
-  color: white;
+}
+
+.btn-conoce-mas:hover {
+  background: #A84B6B;
+  transform: translateX(-50%) translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(189, 88, 119, 0.4);
 }
 
 .producto button {
@@ -217,9 +241,23 @@ body {
 
 .btn-filtro {
   display: block;
-  margin: 2rem auto 1rem;
-  background-color: #FFFFF0;
-  border: #FFFFF0;
+  margin: 30px auto;
+  background: #740354;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(116, 3, 84, 0.2);
+}
+
+.btn-filtro:hover {
+  background: #BD5877;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(116, 3, 84, 0.3);
 }
 
 .producto-contenedor {
@@ -273,8 +311,14 @@ body {
 
 @media (max-width: 768px) {
   .grid-productos {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    padding: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+    padding: 20px 15px;
+  }
+
+  .pulsera-contenedor {
+    margin: 30px 15px;
+    padding: 20px;
   }
 
   .pulsera-ventana {
@@ -282,33 +326,56 @@ body {
     padding: 0 10px;
   }
 
+  .pulsera {
+    gap: 40px;
+  }
+
   .circulo-grande {
-    width: 70px;
-    height: 70px;
+    width: 75px;
+    height: 75px;
   }
 
-  .producto-contenedor {
-    padding: 1rem;
+  .flecha-derecha,
+  .flecha-izquierda {
+    width: 35px;
+    height: 35px;
   }
 
-  .imagen-principal {
-    max-height: 300px;
+  .flecha-derecha::after,
+  .flecha-izquierda::after {
+    font-size: 12px;
   }
 
+  .producto {
+    padding: 8px;
+  }
+
+  .producto img {
+    height: 180px;
+  }
 }
 
-/* Botón de filtro */
-.btn-filtro {
-  position: fixed;
-  top: 160px;
-  right: 10px;
-  z-index: 999;
-  background-color: #FFFFF0;
-  border: #FFFFF0;
-  border-radius: 10px;
-  padding: 10px 15px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+@media (max-width: 480px) {
+  .grid-productos {
+    grid-template-columns: 1fr;
+    padding: 15px 10px;
+  }
+
+  .pulsera {
+    gap: 25px;
+  }
+
+  .circulo-grande {
+    width: 65px;
+    height: 65px;
+  }
+
+  .pieza p {
+    font-size: 12px;
+  }
 }
+
+/* Botón de filtro ya definido arriba */
 
 /* Panel lateral oculto por defecto */
 aside#filtroPanel {
