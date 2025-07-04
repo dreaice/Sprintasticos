@@ -2,21 +2,33 @@ const productosArray = [];
 
 // Función para agregar producto
 function agregarProducto() {
+
   const name = document.getElementById("nombre").value.trim(); 
   const description = document.getElementById("descripcion").value.trim();
-  const price = document.getElementById("precio").value.trim();
-  const imgUrl = document.getElementById("imgUrl").value.trim();
-
-  if (!name || !description || !price) {
+  const price = parseFloat(document.getElementById("precio").value.trim());
+  const material = document.getElementById("material").value.trim();
+  const image_url = document.getElementById("imgUrl").value.trim();
+  const stock = parseInt(document.getElementById("stock").value.trim()); 
+  const categoryId = parseInt(document.getElementById("category").value.trim()); 
+  const stoneId = parseInt(document.getElementById("stone").value()); // 
+  if (!name || !description || !price || !stock || !categoryId || !stoneId ) {
     alert("Por favor completa todos los campos.");
     return;
   };
 
-  const nuevoProducto = {
+  const producto = {
     name,
     description,
     price,
-    imgUrl
+    material,
+    image_url,
+    stock,
+    category: {
+      id_category: categoryId
+    },
+    stone: {
+      id_stone: stoneId
+    }
   };
   productosArray.push(nuevoProducto);
   
