@@ -23,13 +23,29 @@ function agregarProducto() {
   console.log(JSON.stringify(productosArray, null, 2));
   mostrarProducto(nuevoProducto);
   
+  fetch("http://localhost:8080/api/productos",{
+    method:"POST",
+    headers:{
+      "Content-Type":"application/json"
+    },
+    body:JSON.stringify(nuevoProducto)
+}).then(response=>{
+  if(response.ok){
+    console.log("Producto guardado en la bd");
+  } else{
+    console.log("error al guardar");
+  }
+});
+
+
   document.getElementById("nombre").value = "";
   document.getElementById("descripcion").value = "";
   document.getElementById("precio").value = "";
   document.getElementById("imgUrl").value = "";
 
   alert("¡Producto agregado correctamente!");
-}
+
+
 
 
 // Función para mostrar un producto en el contenedor
