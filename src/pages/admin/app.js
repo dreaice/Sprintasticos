@@ -3,7 +3,7 @@ const productosArray = [];
 // Función para agregar producto
 function agregarProducto() {
 
-  const name = document.getElementById("nombre").value.trim(); 
+  const name = document.getElementById("nombre").value.trim();
   const description = document.getElementById("descripcion").value.trim();
   const price = parseFloat(document.getElementById("precio").value.trim());
   const material = document.getElementById("material").value.trim();
@@ -58,7 +58,7 @@ function agregarProducto() {
   alert("¡Producto agregado correctamente!");
 
 
-
+}
 
 // Función para mostrar un producto en el contenedor
 function mostrarProducto(producto) {
