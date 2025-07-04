@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
         initializeScrollAnimations();
         initializeJewelryActions();
-        initializeHeroAnimations();
     }, 100);
 });
 
@@ -49,12 +48,6 @@ function initializeScrollAnimations() {
         // Añadir un delay escalonado para efecto de cascada
         card.style.transitionDelay = `${index * 0.1}s`;
         observer.observe(card);
-    });
-
-    // Observar elementos del hero
-    const heroElements = document.querySelectorAll('.hero-title, .hero-subtitle');
-    heroElements.forEach(element => {
-        observer.observe(element);
     });
 }
 
@@ -184,23 +177,7 @@ function fallbackShare(jewelryTitle) {
     }
 }
 
-// Animaciones del hero
-function initializeHeroAnimations() {
-    const floatingGems = document.querySelectorAll('.floating-gem');
 
-    // Añadir movimiento aleatorio adicional a las gemas
-    floatingGems.forEach((gem, index) => {
-        gem.addEventListener('mouseenter', () => {
-            gem.style.transform = 'scale(1.5)';
-            gem.style.opacity = '0.6';
-        });
-
-        gem.addEventListener('mouseleave', () => {
-            gem.style.transform = 'scale(1)';
-            gem.style.opacity = '0.3';
-        });
-    });
-}
 
 // Sistema de notificaciones
 function showNotification(message, type = 'info') {
@@ -258,22 +235,9 @@ function showNotification(message, type = 'info') {
     }, 3000);
 }
 
-// Efecto parallax suave en el hero
+// Scroll suave (sin efectos de parallax)
 window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const heroSection = document.querySelector('.hero-section');
-    const floatingGems = document.querySelectorAll('.floating-gem');
-
-    if (heroSection) {
-        const rate = scrolled * -0.5;
-        heroSection.style.transform = `translateY(${rate}px)`;
-    }
-
-    // Movimiento diferencial de las gemas
-    floatingGems.forEach((gem, index) => {
-        const rate = scrolled * (0.2 + index * 0.1);
-        gem.style.transform = `translateY(${rate}px)`;
-    });
+    // Aquí puedes agregar otros efectos de scroll si los necesitas
 });
 
 // Smooth scroll para anclas
@@ -295,17 +259,4 @@ document.addEventListener('click', (e) => {
 // Preloader (opcional)
 window.addEventListener('load', () => {
     document.body.classList.add('loaded');
-
-    // Animar entrada de elementos después de que todo esté cargado
-    const heroContent = document.querySelector('.hero-content');
-    if (heroContent) {
-        heroContent.style.opacity = '0';
-        heroContent.style.transform = 'translateY(30px)';
-
-        setTimeout(() => {
-            heroContent.style.transition = 'all 1s ease';
-            heroContent.style.opacity = '1';
-            heroContent.style.transform = 'translateY(0)';
-        }, 200);
-    }
 });
