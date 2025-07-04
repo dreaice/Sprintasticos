@@ -34,7 +34,7 @@ body {
 
 .pulsera {
   display: flex;
-  gap: 66px;
+  gap: 70px;
   /* ← separación entre círculos */
   transition: transform 0.5s ease-in-out;
 }
@@ -48,9 +48,9 @@ body {
 }
 
 .circulo-grande {
-  width: 90px;
-  height: 90px;
-  border: 1.5px solid #740354;
+  width: 110px;
+  height: 110px;
+  border: 2px solid #740354;
   border-radius: 50%;
   overflow: hidden;
   background: #FFFBF5;
@@ -80,11 +80,12 @@ body {
 }
 
 .pieza p {
-  font-size: 14px;
+  font-size: 15px;
   text-align: center;
-  margin-top: 5px;
+  margin-top: 8px;
   color: #2C3E50;
   transition: color 0.3s ease;
+  font-weight: 500;
 }
 
 .pieza:hover p {
@@ -141,24 +142,18 @@ body {
 
 .grid-productos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   gap: 40px;
   padding: 40px 20px;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   justify-items: center;
   align-items: center;
 }
 
 .grid-productos>div {
-  /*
   width: 100%;
-  max-width: 200px;
-  height: auto;
-  text-align: center;
-  padding: 10px;*/
-  width: 100%;
-  max-width: 200px;
+  max-width: 250px;
   height: auto;
   text-align: center;
   padding: 10px;
@@ -167,8 +162,8 @@ body {
 
 .producto {
   width: 100%;
-  max-width: 200px;
-  height: 260px;
+  max-width: 250px;
+  height: 310px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -182,9 +177,9 @@ body {
 }
 
 .producto img {
-  width: 200px;
+  width: 240px;
   /* o el tamaño que desees */
-  height: 220px;
+  height: 260px;
   /* mismo valor para cuadrado */
   object-fit: cover;
   /* Ajusta la imagen al tamaño del contenedor sin distorsión */
@@ -311,9 +306,10 @@ body {
 
 @media (max-width: 768px) {
   .grid-productos {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 25px;
     padding: 20px 15px;
+    max-width: 900px;
   }
 
   .pulsera-contenedor {
@@ -331,8 +327,8 @@ body {
   }
 
   .circulo-grande {
-    width: 75px;
-    height: 75px;
+    width: 90px;
+    height: 90px;
   }
 
   .flecha-derecha,
@@ -348,10 +344,13 @@ body {
 
   .producto {
     padding: 8px;
+    max-width: 220px;
+    height: 270px;
   }
 
   .producto img {
-    height: 180px;
+    width: 200px;
+    height: 220px;
   }
 }
 
@@ -359,6 +358,7 @@ body {
   .grid-productos {
     grid-template-columns: 1fr;
     padding: 15px 10px;
+    max-width: 320px;
   }
 
   .pulsera {
@@ -366,12 +366,22 @@ body {
   }
 
   .circulo-grande {
-    width: 65px;
-    height: 65px;
+    width: 80px;
+    height: 80px;
   }
 
   .pieza p {
     font-size: 12px;
+  }
+
+  .producto {
+    max-width: 200px;
+    height: 240px;
+  }
+
+  .producto img {
+    width: 180px;
+    height: 200px;
   }
 }
 
